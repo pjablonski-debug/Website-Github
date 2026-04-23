@@ -1,539 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opticent | Technology</title>
-    <link rel="stylesheet" href="styles.css">
 
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opticent | Technology</title>
+  <link rel="stylesheet" href="styles.css">
+
+
 </head>
+
 <body>
 
-<div class="sw" id="sw">
-  <script>
-    // This runs before the browser paints the screen, preventing the blue flash
-    if (localStorage.getItem('opticent_mode') === 'metro') {
-      document.getElementById('sw').classList.add('metro');
-    }
-  </script>
-  <nav id="nav">
-    <a href="index.html" class="logo-lockup">
-      <div class="logo-img-wrap">
-        <div class="logo-img logo-health" id="lh"><div class="logo-svg"></div></div>
-        <div class="logo-img logo-metro" id="lm"><div class="logo-svg"></div></div>
-      </div>
-      <div class="logo-text-wrap">
-        <span class="logo-opticent">Opticent</span>
-        <div class="logo-division"><div class="slot-reel" id="reel"><span class="slot-word">Health</span><span class="slot-word">Metrology</span></div></div>
-      </div>
-    </a>
-    <ul class="nav-links">
+  <div class="sw" id="sw">
+    <script>
+      // This runs before the browser paints the screen, preventing the blue flash
+      if (localStorage.getItem('opticent_mode') === 'metro') {
+        document.getElementById('sw').classList.add('metro');
+      }
+    </script>
+    <nav id="nav">
+      <a href="index.html" class="logo-lockup">
+        <div class="logo-img-wrap">
+          <div class="logo-img logo-health" id="lh">
+            <div class="logo-svg"></div>
+          </div>
+          <div class="logo-img logo-metro" id="lm">
+            <div class="logo-svg"></div>
+          </div>
+        </div>
+        <div class="logo-text-wrap">
+          <span class="logo-opticent">Opticent</span>
+          <div class="logo-division">
+            <div class="slot-reel" id="reel"><span class="slot-word">Health</span><span
+                class="slot-word">Metrology</span></div>
+          </div>
+        </div>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">About Us</a></li>
         <li><a href="technology.html" class="active-page">Technology</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-    <div class="switcher-pill">
-      <button class="switch-btn sw-active-h" id="bh" onclick="go('health')">Health</button>
-      <button class="switch-btn" id="bm" onclick="go('metro')">Metrology</button>
-    </div>
-  </nav>
-
-  <div class="main-container">
-    <div class="hero">
-      <div class="hero-content fade-target">
-        <h1 class="hero-h1" id="h1">What is Vis-OCT?</h1>
-        <p class="hero-sub" id="sub">Visible-light optical coherence tomography (vis-OCT) is the latest development of OCT, providing new capabilities in anatomical and functional imaging of biological tissue.</p>
+      </ul>
+      <div class="switcher-pill">
+        <button class="switch-btn sw-active-h" id="bh" onclick="go('health')">Health</button>
+        <button class="switch-btn" id="bm" onclick="go('metro')">Metrology</button>
       </div>
-      <div class="hero-visual fade-target">
-        <img id="tech_hero_img" src="Images/Tech Hero2.png" alt="vis-OCT Technology">
-      </div>
-    </div>
+    </nav>
 
-    <div class="features fade-target">
-
-      <div class="cards-grid fade-target" style="max-width: 1400px; margin: 0 auto; gap: 2rem;">
-        <div class="feat-card" id="d1" style="border-top: 4px solid var(--ba); padding: 1.5rem 2rem;">
-          <p class="section-label">The Legacy</p>
-          <h3 class="feat-title">Standard OCT</h3>
-          <p class="feat-desc">Traditional OCT transformed clinical care, but its reliance on near-infrared light limits functional and anatomical data collection.</p>
+    <div class="main-container">
+      <div class="hero">
+        <div class="hero-content fade-target">
+          <h1 class="hero-h1" id="h1">What is Vis-OCT?</h1>
+          <p class="hero-sub" id="sub">Visible-light optical coherence tomography (vis-OCT) is the latest development of
+            OCT, providing new capabilities in anatomical and functional imaging of biological tissue.</p>
         </div>
-        <div class="feat-card" id="d2" style="border-top: 4px solid var(--ba); padding: 1.5rem 2rem;">
-          <p class="section-label">The Frontier</p>
-          <h3 class="feat-title">Vis-OCT</h3>
-          <p class="feat-desc">By shifting to visible light illumination, vis-OCT pushes past traditional boundaries, unlocking new capabilities for research and clinical care.</p>
-        </div>
-        <div class="feat-card" id="d3" style="border-top: 4px solid var(--ba); padding: 1.5rem 2rem;">
-          <p class="section-label">The Pioneers</p>
-          <h3 class="feat-title">Born from Research</h3>
-          <p class="feat-desc">Invented at Northwestern University in 2013 by Professor Hao F. Zhang's lab, vis-OCT powers the ultra-high resolution of our flagship Blizzard spectrometer.</p>
+        <div class="hero-visual fade-target">
+          <img id="tech_hero_img" src="Images/Tech Hero2.png" alt="vis-OCT Technology">
         </div>
       </div>
-    </div>
 
-    <div class="features features-alt fade-target">
-      <div class="content-block" style="text-align: center; margin: 0 auto 3rem auto; max-width: 100%;">
-        <h2 class="section-title" id="flow_title">What sets our technology apart?</h2>
-      </div>
+      <div class="features fade-target">
 
-      <div class="cards-grid fade-target" style="max-width: 1200px; margin: 0 auto; gap: 2.5rem; padding-top: 0rem;">
-        
-        <div class="feat-card" style="padding: 1.5rem; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 3rem;">
-          <img src="Images/Functional.png" id="c1_img" alt="Functional Imaging" style="width: 190px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; margin-top: -4rem; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background: #fff;">
-          <div style="flex: 1;">
-            <p class="section-label" id="c1l">Functional Imaging</p>
-            <p class="feat-title" id="c1t" style="font-size: 20px;">Functional Imaging of the Retina</p>
-            <p class="feat-desc" id="c1d">Thanks to the improved optical contract in the visible-light spectral range, our technology offers new functional analyses of the retina like no other.</p>
+        <div class="cards-grid fade-target" style="max-width: 1400px; margin: 0 auto; gap: 2rem;">
+          <div class="feat-card" id="d1" style="border-top: 4px solid var(--ba); padding: 1.5rem 2rem;">
+            <p class="section-label">The Legacy</p>
+            <h3 class="feat-title">Standard OCT</h3>
+            <p class="feat-desc">Traditional OCT transformed clinical care, but its reliance on near-infrared light
+              limits functional and anatomical data collection.</p>
           </div>
-        </div>
-        
-        <div class="feat-card" style="padding: 1.5rem; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 3rem;">
-          <img src="Images/Fundus.png" id="c2_img" alt="Small Animals" style="width: 190px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; margin-top: -4rem; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background: #fff;">
-          <div style="flex: 1;">
-            <p class="section-label" id="c2l">Small Animals</p>
-            <p class="feat-title" id="c2t" style="font-size: 20px;">Revolutionary Small Animal Imaging</p>
-            <p class="feat-desc" id="c2d">Our systems provide the best functional and anatomical ocular imaging of both anterior and posterior segments of small animal eyes.</p>
+          <div class="feat-card" id="d2" style="border-top: 4px solid var(--ba); padding: 1.5rem 2rem;">
+            <p class="section-label">The Frontier</p>
+            <h3 class="feat-title">Vis-OCT</h3>
+            <p class="feat-desc">By shifting to visible light illumination, vis-OCT pushes past traditional boundaries,
+              unlocking new capabilities for research and clinical care.</p>
           </div>
-        </div>
-        
-        <div class="feat-card" style="padding: 1.5rem; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 3rem;">
-          <img src="Images/Retinal.png" id="c3_img" alt="Retina" style="width: 190px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; margin-top: -4rem; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background: #fff;">
-          <div style="flex: 1;">
-            <p class="section-label" id="c3l">Retina</p>
-            <p class="feat-title" id="c3t" style="font-size: 20px;">Highest Resolution Retinal Imaging</p>
-            <p class="feat-desc" id="c3d">Our technology is capable of a 1.3 micrometer axial resolution in the human eye, nearly 3x higher than current state-of-the-art clinical OCTs.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="features fade-target">
-      <div class="split-section reverse layers-cluster">
-        <div class="content-block" style="margin-bottom: 0;">
-          <p class="section-label" id="c4l">Research</p>
-          <h2 class="section-title" id="c4t">Enabling Advanced Research</h2>
-          <p class="section-desc" id="c4d">Our vis-OCT systems are currently being evaluated through IRB-approved research studies at major institutions worldwide. The unprecedented resolution and functional imaging capabilities are helping researchers better understand the mechanisms of blinding diseases.</p>
-          <a href="research.html" class="hero-link" style="font-size: 16px;" id="c4a">View our research →</a>
-        </div>
-        <style>
-          .vert-carousel-wrapper {
-            height: 350px;
-            overflow: hidden;
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            position: relative;
-            /* Creates the fade effect at the top and bottom */
-            -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-            mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-          }
-          
-          .vert-carousel-track {
-            display: flex;
-            flex-direction: column;
-            animation: scrollVert 35s linear infinite;
-          }
-          
-          .vert-carousel-track:hover {
-            animation-play-state: paused;
-          }
-          
-          .vert-logo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem 1.5rem;
-            padding: 0 1.5rem 2.5rem 1.5rem; /* Replaced padding: 2rem 1.5rem; */
-            align-items: center;
-            justify-items: center;
-          }
-
-          /* Hide/Show logic based on mode */
-          .metro-carousel { display: none !important; }
-          .sw.metro .metro-carousel { display: grid !important; }
-          .sw.metro .health-carousel { display: none !important; }
-          
-          .vert-partner-img {
-            width: 90px;  /* Forces the width */
-            height: 90px; /* Forces the height to match, creating a square */
-            object-fit: contain; /* Keeps the logo proportional inside the square */
-            
-            /* Adds a physical square card look */
-            background: #f8faff; 
-            padding: 12px;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            
-            filter: grayscale(100%) opacity(60%);
-            transition: all 0.3s ease;
-            cursor: pointer;
-          }
-          
-          .vert-partner-img:hover {
-            filter: grayscale(0%) opacity(100%);
-            transform: scale(1.05) translateY(-4px);
-            background: #fff;
-            border-color: var(--ba);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-          }
-          
-          @keyframes scrollVert {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-50%); }
-          }
-        </style>
-
-        <div class="vert-carousel-wrapper image-block">
-          <div class="vert-carousel-track">
-            
-            <div class="vert-logo-grid health-carousel">
-              <img src="images/Partner1.png" alt="Partner 1" class="vert-partner-img">
-              <img src="images/Partner2.png" alt="Partner 2" class="vert-partner-img">
-              <img src="images/Partner3.png" alt="Partner 3" class="vert-partner-img">
-              <img src="images/Partner4.png" alt="Partner 4" class="vert-partner-img">
-              <img src="images/Partner5.png" alt="Partner 5" class="vert-partner-img">
-              <img src="images/Partner6.png" alt="Partner 6" class="vert-partner-img">
-              <img src="images/Partner7.png" alt="Partner 7" class="vert-partner-img">
-              <img src="images/Partner8.png" alt="Partner 8" class="vert-partner-img">
-              <img src="images/Partner9.png" alt="Partner 9" class="vert-partner-img">
-              <img src="images/Partner10.png" alt="Partner 10" class="vert-partner-img">
-              <img src="images/Partner11.png" alt="Partner 11" class="vert-partner-img">
-              <img src="images/Partner12.png" alt="Partner 12" class="vert-partner-img">
-              <img src="images/Partner13.png" alt="Partner 13" class="vert-partner-img">
-              <img src="images/Partner14.png" alt="Partner 14" class="vert-partner-img">
-              <img src="images/Partner15.png" alt="Partner 15" class="vert-partner-img">
-              <img src="images/Partner16.png" alt="Partner 16" class="vert-partner-img">
-              <img src="images/Partner17.png" alt="Partner 17" class="vert-partner-img">
-              <img src="images/Partner9.png" alt="Partner 9" class="vert-partner-img">
-            </div>
-            <div class="vert-logo-grid health-carousel">
-              <img src="images/Partner1.png" alt="Partner 1" class="vert-partner-img">
-              <img src="images/Partner2.png" alt="Partner 2" class="vert-partner-img">
-              <img src="images/Partner3.png" alt="Partner 3" class="vert-partner-img">
-              <img src="images/Partner4.png" alt="Partner 4" class="vert-partner-img">
-              <img src="images/Partner5.png" alt="Partner 5" class="vert-partner-img">
-              <img src="images/Partner6.png" alt="Partner 6" class="vert-partner-img">
-              <img src="images/Partner7.png" alt="Partner 7" class="vert-partner-img">
-              <img src="images/Partner8.png" alt="Partner 8" class="vert-partner-img">
-              <img src="images/Partner9.png" alt="Partner 9" class="vert-partner-img">
-              <img src="images/Partner10.png" alt="Partner 10" class="vert-partner-img">
-              <img src="images/Partner11.png" alt="Partner 11" class="vert-partner-img">
-              <img src="images/Partner12.png" alt="Partner 12" class="vert-partner-img">
-              <img src="images/Partner13.png" alt="Partner 13" class="vert-partner-img">
-              <img src="images/Partner14.png" alt="Partner 14" class="vert-partner-img">
-              <img src="images/Partner15.png" alt="Partner 15" class="vert-partner-img">
-              <img src="images/Partner16.png" alt="Partner 16" class="vert-partner-img">
-              <img src="images/Partner17.png" alt="Partner 17" class="vert-partner-img">
-              <img src="images/Partner9.png" alt="Partner 9" class="vert-partner-img">
-            </div>
-
-            <div class="vert-logo-grid metro-carousel">
-              <img src="images/icon-aerospace.png" alt="Aerospace" title="Aerospace" class="vert-partner-img">
-              <img src="images/icon-automotive.jpg" alt="Automotive" title="Automotive" class="vert-partner-img">
-              <img src="images/icon-semiconductor.jpg" alt="Semiconductors" title="Semiconductors" class="vert-partner-img">
-              <img src="images/icon-medical-device.png" alt="Medical Devices" title="Medical Devices" class="vert-partner-img">
-              <img src="images/icon-optics.png" alt="Optics & Photonics" title="Optics & Photonics" class="vert-partner-img">
-              <img src="images/icon-electronics.png" alt="Consumer Electronics" title="Consumer Electronics" class="vert-partner-img">
-              <img src="images/icon-machining.jpg" alt="Precision Machining" title="Precision Machining" class="vert-partner-img">
-              <img src="images/icon-displays.png" alt="Displays & AR/VR" title="Displays & AR/VR" class="vert-partner-img">
-              <img src="images/icon-materials.png" alt="Advanced Materials" title="Advanced Materials" class="vert-partner-img">
-              <img src="images/icon-defense.png" alt="Defense" title="Defense" class="vert-partner-img">
-              <img src="images/icon-energy.png" alt="Energy" title="Energy" class="vert-partner-img">
-              <img src="images/icon-watchmaking.jpg" alt="Watchmaking" title="Watchmaking" class="vert-partner-img">
-              <img src="images/icon-plastics.png" alt="Injection Molding" title="Injection Molding" class="vert-partner-img">
-              <img src="images/icon-additive.png" alt="Additive Manufacturing" title="Additive Manufacturing" class="vert-partner-img">
-              <img src="images/icon-battery.jpg" alt="Battery Manufacturing" title="Battery Manufacturing" class="vert-partner-img">
-            </div>
-            <div class="vert-logo-grid metro-carousel">
-              <img src="images/icon-aerospace.png" alt="Aerospace" title="Aerospace" class="vert-partner-img">
-              <img src="images/icon-automotive.jpg" alt="Automotive" title="Automotive" class="vert-partner-img">
-              <img src="images/icon-semiconductor.jpg" alt="Semiconductors" title="Semiconductors" class="vert-partner-img">
-              <img src="images/icon-medical-device.png" alt="Medical Devices" title="Medical Devices" class="vert-partner-img">
-              <img src="images/icon-optics.png" alt="Optics & Photonics" title="Optics & Photonics" class="vert-partner-img">
-              <img src="images/icon-electronics.png" alt="Consumer Electronics" title="Consumer Electronics" class="vert-partner-img">
-              <img src="images/icon-machining.jpg" alt="Precision Machining" title="Precision Machining" class="vert-partner-img">
-              <img src="images/icon-displays.png" alt="Displays & AR/VR" title="Displays & AR/VR" class="vert-partner-img">
-              <img src="images/icon-materials.png" alt="Advanced Materials" title="Advanced Materials" class="vert-partner-img">
-              <img src="images/icon-defense.png" alt="Defense" title="Defense" class="vert-partner-img">
-              <img src="images/icon-energy.png" alt="Energy" title="Energy" class="vert-partner-img">
-              <img src="images/icon-watchmaking.jpg" alt="Watchmaking" title="Watchmaking" class="vert-partner-img">
-              <img src="images/icon-plastics.png" alt="Injection Molding" title="Injection Molding" class="vert-partner-img">
-              <img src="images/icon-additive.png" alt="Additive Manufacturing" title="Additive Manufacturing" class="vert-partner-img">
-              <img src="images/icon-battery.jpg" alt="Battery Manufacturing" title="Battery Manufacturing" class="vert-partner-img">
-            </div>
-
+          <div class="feat-card" id="d3" style="border-top: 4px solid var(--ba); padding: 1.5rem 2rem;">
+            <p class="section-label">The Pioneers</p>
+            <h3 class="feat-title">Born from Research</h3>
+            <p class="feat-desc">Invented at Northwestern University in 2013 by Professor Hao F. Zhang's lab, vis-OCT
+              powers the ultra-high resolution of our flagship Blizzard spectrometer.</p>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="features features-alt fade-target metro-only-section">
-      <div class="split-section layers-cluster">
-        <div class="content-block" style="margin-bottom: 0;">
-          <p class="section-label">Performance</p>
-          <h2 class="section-title">Unmatched Resolution</h2>
-          <p class="section-desc">Our systems capture micron-scale details with astonishing clarity. Browse through our samples to see the level of precision we deliver across varying materials, surface textures, and complex geometries.</p>
+      <div class="features features-alt fade-target">
+        <div class="content-block" style="text-align: center; margin: 0 auto 3rem auto; max-width: 100%;">
+          <h2 class="section-title" id="flow_title">What sets our technology apart?</h2>
         </div>
-        
-        <div class="image-block" style="width: 420px; flex-shrink: 0;">
-          <div class="carousel-module">
-            <div class="carousel-viewport">
-              <div class="carousel-slides" id="metro-slides">
-                <div class="slide">
-                  <img src="images/sample1.png" alt="Semiconductor Wafer Scan">
-                  <div class="slide-caption">Transistor semiconductor die pictured with debris</div>
+
+        <div class="cards-grid fade-target" style="max-width: 1200px; margin: 0 auto; gap: 2.5rem; padding-top: 0rem;">
+
+          <div class="feat-card"
+            style="padding: 1.5rem; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 3rem;">
+            <img src="Images/Functional.png" id="c1_img" alt="Functional Imaging"
+              style="width: 190px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; margin-top: -4rem; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background: #fff;">
+            <div style="flex: 1;">
+              <p class="section-label" id="c1l">Functional Imaging</p>
+              <p class="feat-title" id="c1t" style="font-size: 20px;">Functional Imaging of the Retina</p>
+              <p class="feat-desc" id="c1d">Thanks to the improved optical contract in the visible-light spectral range,
+                our technology offers new functional analyses of the retina like no other.</p>
+            </div>
+          </div>
+
+          <div class="feat-card"
+            style="padding: 1.5rem; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 3rem;">
+            <img src="Images/Fundus.png" id="c2_img" alt="Small Animals"
+              style="width: 190px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; margin-top: -4rem; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background: #fff;">
+            <div style="flex: 1;">
+              <p class="section-label" id="c2l">Small Animals</p>
+              <p class="feat-title" id="c2t" style="font-size: 20px;">Revolutionary Small Animal Imaging</p>
+              <p class="feat-desc" id="c2d">Our systems provide the best functional and anatomical ocular imaging of
+                both anterior and posterior segments of small animal eyes.</p>
+            </div>
+          </div>
+
+          <div class="feat-card"
+            style="padding: 1.5rem; border: 1px solid #eee; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 3rem;">
+            <img src="Images/Retinal.png" id="c3_img" alt="Retina"
+              style="width: 190px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; margin-top: -4rem; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background: #fff;">
+            <div style="flex: 1;">
+              <p class="section-label" id="c3l">Retina</p>
+              <p class="feat-title" id="c3t" style="font-size: 20px;">Highest Resolution Retinal Imaging</p>
+              <p class="feat-desc" id="c3d">Our technology is capable of a 1.3 micrometer axial resolution in the human
+                eye, nearly 3x higher than current state-of-the-art clinical OCTs.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="features fade-target">
+        <div class="split-section reverse layers-cluster">
+          <div class="content-block" style="margin-bottom: 0;">
+            <p class="section-label" id="c4l">Research</p>
+            <h2 class="section-title" id="c4t">Enabling Advanced Research</h2>
+            <p class="section-desc" id="c4d">Our vis-OCT systems are currently being evaluated through IRB-approved
+              research studies at major institutions worldwide. The unprecedented resolution and functional imaging
+              capabilities are helping researchers better understand the mechanisms of blinding diseases.</p>
+            <a href="research.html" class="hero-link" style="font-size: 16px;" id="c4a">View our research →</a>
+          </div>
+          <style>
+            .vert-carousel-wrapper {
+              height: 350px;
+              overflow: hidden;
+              background: #fff;
+              border: 1px solid #e2e8f0;
+              border-radius: 16px;
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+              position: relative;
+              /* Creates the fade effect at the top and bottom */
+              -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+              mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+            }
+
+            .vert-carousel-track {
+              display: flex;
+              flex-direction: column;
+              animation: scrollVert 35s linear infinite;
+            }
+
+            .vert-carousel-track:hover {
+              animation-play-state: paused;
+            }
+
+            .vert-logo-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 2.5rem 1.5rem;
+              padding: 0 1.5rem 2.5rem 1.5rem;
+              /* Replaced padding: 2rem 1.5rem; */
+              align-items: center;
+              justify-items: center;
+            }
+
+            /* Hide/Show logic based on mode */
+            .metro-carousel {
+              display: none !important;
+            }
+
+            .sw.metro .metro-carousel {
+              display: grid !important;
+            }
+
+            .sw.metro .health-carousel {
+              display: none !important;
+            }
+
+            .vert-partner-img {
+              width: 90px;
+              /* Forces the width */
+              height: 90px;
+              /* Forces the height to match, creating a square */
+              object-fit: contain;
+              /* Keeps the logo proportional inside the square */
+
+              /* Adds a physical square card look */
+              background: #f8faff;
+              padding: 12px;
+              border: 1px solid #e2e8f0;
+              border-radius: 12px;
+
+              filter: grayscale(100%) opacity(60%);
+              transition: all 0.3s ease;
+              cursor: pointer;
+            }
+
+            .vert-partner-img:hover {
+              filter: grayscale(0%) opacity(100%);
+              transform: scale(1.05) translateY(-4px);
+              background: #fff;
+              border-color: var(--ba);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            }
+
+            @keyframes scrollVert {
+              0% {
+                transform: translateY(0);
+              }
+
+              100% {
+                transform: translateY(-50%);
+              }
+            }
+          </style>
+
+          <div class="vert-carousel-wrapper image-block">
+            <div class="vert-carousel-track">
+
+              <div class="vert-logo-grid health-carousel">
+                <img src="Images/Partner1.png" alt="Partner 1" class="vert-partner-img">
+                <img src="Images/Partner2.png" alt="Partner 2" class="vert-partner-img">
+                <img src="Images/Partner3.png" alt="Partner 3" class="vert-partner-img">
+                <img src="Images/Partner4.png" alt="Partner 4" class="vert-partner-img">
+                <img src="Images/Partner5.png" alt="Partner 5" class="vert-partner-img">
+                <img src="Images/Partner6.png" alt="Partner 6" class="vert-partner-img">
+                <img src="Images/Partner7.png" alt="Partner 7" class="vert-partner-img">
+                <img src="Images/Partner8.png" alt="Partner 8" class="vert-partner-img">
+                <img src="Images/Partner9.png" alt="Partner 9" class="vert-partner-img">
+                <img src="Images/Partner10.png" alt="Partner 10" class="vert-partner-img">
+                <img src="Images/Partner11.png" alt="Partner 11" class="vert-partner-img">
+                <img src="Images/Partner12.png" alt="Partner 12" class="vert-partner-img">
+                <img src="Images/Partner13.png" alt="Partner 13" class="vert-partner-img">
+                <img src="Images/Partner14.png" alt="Partner 14" class="vert-partner-img">
+                <img src="Images/Partner15.png" alt="Partner 15" class="vert-partner-img">
+                <img src="Images/Partner16.png" alt="Partner 16" class="vert-partner-img">
+                <img src="Images/Partner17.png" alt="Partner 17" class="vert-partner-img">
+                <img src="Images/Partner9.png" alt="Partner 9" class="vert-partner-img">
+              </div>
+              <div class="vert-logo-grid health-carousel">
+                <img src="Images/Partner1.png" alt="Partner 1" class="vert-partner-img">
+                <img src="Images/Partner2.png" alt="Partner 2" class="vert-partner-img">
+                <img src="Images/Partner3.png" alt="Partner 3" class="vert-partner-img">
+                <img src="Images/Partner4.png" alt="Partner 4" class="vert-partner-img">
+                <img src="Images/Partner5.png" alt="Partner 5" class="vert-partner-img">
+                <img src="Images/Partner6.png" alt="Partner 6" class="vert-partner-img">
+                <img src="Images/Partner7.png" alt="Partner 7" class="vert-partner-img">
+                <img src="Images/Partner8.png" alt="Partner 8" class="vert-partner-img">
+                <img src="Images/Partner9.png" alt="Partner 9" class="vert-partner-img">
+                <img src="Images/Partner10.png" alt="Partner 10" class="vert-partner-img">
+                <img src="Images/Partner11.png" alt="Partner 11" class="vert-partner-img">
+                <img src="Images/Partner12.png" alt="Partner 12" class="vert-partner-img">
+                <img src="Images/Partner13.png" alt="Partner 13" class="vert-partner-img">
+                <img src="Images/Partner14.png" alt="Partner 14" class="vert-partner-img">
+                <img src="Images/Partner15.png" alt="Partner 15" class="vert-partner-img">
+                <img src="Images/Partner16.png" alt="Partner 16" class="vert-partner-img">
+                <img src="Images/Partner17.png" alt="Partner 17" class="vert-partner-img">
+                <img src="Images/Partner9.png" alt="Partner 9" class="vert-partner-img">
+              </div>
+
+              <div class="vert-logo-grid metro-carousel">
+                <img src="Images/icon-aerospace.png" alt="Aerospace" title="Aerospace" class="vert-partner-img">
+                <img src="Images/icon-automotive.jpg" alt="Automotive" title="Automotive" class="vert-partner-img">
+                <img src="Images/icon-semiconductor.jpg" alt="Semiconductors" title="Semiconductors"
+                  class="vert-partner-img">
+                <img src="Images/icon-medical-device.png" alt="Medical Devices" title="Medical Devices"
+                  class="vert-partner-img">
+                <img src="Images/icon-optics.png" alt="Optics & Photonics" title="Optics & Photonics"
+                  class="vert-partner-img">
+                <img src="Images/icon-electronics.png" alt="Consumer Electronics" title="Consumer Electronics"
+                  class="vert-partner-img">
+                <img src="Images/icon-machining.jpg" alt="Precision Machining" title="Precision Machining"
+                  class="vert-partner-img">
+                <img src="Images/icon-displays.png" alt="Displays & AR/VR" title="Displays & AR/VR"
+                  class="vert-partner-img">
+                <img src="Images/icon-materials.png" alt="Advanced Materials" title="Advanced Materials"
+                  class="vert-partner-img">
+                <img src="Images/icon-defense.png" alt="Defense" title="Defense" class="vert-partner-img">
+                <img src="Images/icon-energy.png" alt="Energy" title="Energy" class="vert-partner-img">
+                <img src="Images/icon-watchmaking.jpg" alt="Watchmaking" title="Watchmaking" class="vert-partner-img">
+                <img src="Images/icon-plastics.png" alt="Injection Molding" title="Injection Molding"
+                  class="vert-partner-img">
+                <img src="Images/icon-additive.png" alt="Additive Manufacturing" title="Additive Manufacturing"
+                  class="vert-partner-img">
+                <img src="Images/icon-battery.jpg" alt="Battery Manufacturing" title="Battery Manufacturing"
+                  class="vert-partner-img">
+              </div>
+              <div class="vert-logo-grid metro-carousel">
+                <img src="Images/icon-aerospace.png" alt="Aerospace" title="Aerospace" class="vert-partner-img">
+                <img src="Images/icon-automotive.jpg" alt="Automotive" title="Automotive" class="vert-partner-img">
+                <img src="Images/icon-semiconductor.jpg" alt="Semiconductors" title="Semiconductors"
+                  class="vert-partner-img">
+                <img src="Images/icon-medical-device.png" alt="Medical Devices" title="Medical Devices"
+                  class="vert-partner-img">
+                <img src="Images/icon-optics.png" alt="Optics & Photonics" title="Optics & Photonics"
+                  class="vert-partner-img">
+                <img src="Images/icon-electronics.png" alt="Consumer Electronics" title="Consumer Electronics"
+                  class="vert-partner-img">
+                <img src="Images/icon-machining.jpg" alt="Precision Machining" title="Precision Machining"
+                  class="vert-partner-img">
+                <img src="Images/icon-displays.png" alt="Displays & AR/VR" title="Displays & AR/VR"
+                  class="vert-partner-img">
+                <img src="Images/icon-materials.png" alt="Advanced Materials" title="Advanced Materials"
+                  class="vert-partner-img">
+                <img src="Images/icon-defense.png" alt="Defense" title="Defense" class="vert-partner-img">
+                <img src="Images/icon-energy.png" alt="Energy" title="Energy" class="vert-partner-img">
+                <img src="Images/icon-watchmaking.jpg" alt="Watchmaking" title="Watchmaking" class="vert-partner-img">
+                <img src="Images/icon-plastics.png" alt="Injection Molding" title="Injection Molding"
+                  class="vert-partner-img">
+                <img src="Images/icon-additive.png" alt="Additive Manufacturing" title="Additive Manufacturing"
+                  class="vert-partner-img">
+                <img src="Images/icon-battery.jpg" alt="Battery Manufacturing" title="Battery Manufacturing"
+                  class="vert-partner-img">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features features-alt fade-target metro-only-section">
+        <div class="split-section layers-cluster">
+          <div class="content-block" style="margin-bottom: 0;">
+            <p class="section-label">Performance</p>
+            <h2 class="section-title">Unmatched Resolution</h2>
+            <p class="section-desc">Our systems capture micron-scale details with astonishing clarity. Browse through
+              our samples to see the level of precision we deliver across varying materials, surface textures, and
+              complex geometries.</p>
+          </div>
+
+          <div class="image-block" style="width: 420px; flex-shrink: 0;">
+            <div class="carousel-module">
+              <div class="carousel-viewport">
+                <div class="carousel-slides" id="metro-slides">
+                  <div class="slide">
+                    <img src="Images/sample1.png" alt="Semiconductor Wafer Scan">
+                    <div class="slide-caption">Transistor semiconductor die pictured with debris</div>
+                  </div>
+                  <div class="slide">
+                    <img src="Images/sample2.png" alt="Solder">
+                    <div class="slide-caption">Solder joint on SMT resistor</div>
+                  </div>
+                  <div class="slide">
+                    <img src="Images/sample3.png" alt="Machined Surface Roughness">
+                    <div class="slide-caption">Strand of cat hair</div>
+                  </div>
+                  <div class="slide">
+                    <img src="Images/sample4.png" alt="Machined Surface Roughness">
+                    <div class="slide-caption">Fibers within cellulosic tissue</div>
+                  </div>
                 </div>
-                <div class="slide">
-                  <img src="images/sample2.png" alt="Solder">
-                  <div class="slide-caption">Solder joint on SMT resistor</div>
-                </div>
-                <div class="slide">
-                  <img src="images/sample3.png" alt="Machined Surface Roughness">
-                  <div class="slide-caption">Strand of cat hair</div>
-                </div>
-                <div class="slide">
-                  <img src="images/sample4.png" alt="Machined Surface Roughness">
-                  <div class="slide-caption">Fibers within cellulosic tissue</div>
+
+                <button class="car-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="car-arrow next" onclick="moveSlide(1)">&#10095;</button>
+
+                <div class="car-dots" id="metro-dots">
+                  <span class="car-dot active" onclick="setSlide(0)"><span class="dot-progress"></span></span>
+                  <span class="car-dot" onclick="setSlide(1)"><span class="dot-progress"></span></span>
+                  <span class="car-dot" onclick="setSlide(2)"><span class="dot-progress"></span></span>
+                  <span class="car-dot" onclick="setSlide(3)"><span class="dot-progress"></span></span>
                 </div>
               </div>
-              
-              <button class="car-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
-              <button class="car-arrow next" onclick="moveSlide(1)">&#10095;</button>
-              
-              <div class="car-dots" id="metro-dots">
-                <span class="car-dot active" onclick="setSlide(0)"><span class="dot-progress"></span></span>
-                <span class="car-dot" onclick="setSlide(1)"><span class="dot-progress"></span></span>
-                <span class="car-dot" onclick="setSlide(2)"><span class="dot-progress"></span></span>
-                <span class="car-dot" onclick="setSlide(3)"><span class="dot-progress"></span></span>
-              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features features-alt fade-target" id="blizzard-section">
+        <div class="split-section layers-cluster">
+          <div class="content-block" style="margin-bottom: 0;">
+            <p class="section-label" id="b_l">Imaging</p>
+            <h2 class="section-title" id="b_t">The Power of Blizzard SR</h2>
+            <p class="section-desc" id="b_d">We've designed the Blizzard SR to have the best-in-class performance,
+              featuring a far superior roll-off performance, high signal-to-noise, and an ideal point spread function.
+              Research with the Blizzard SR has a much improved resolution of anatomical structures and improved
+              homogeneity of spectra quality over varying depths.</p>
+            <a href="#" class="hero-link" style="font-size: 16px;" id="b_a">Blizzard SR Documentation →</a>
+          </div>
+          <div class="image-block">
+            <img id="blizzard_img" src="Images/Rolloff.png" alt="Blizzard SR Spectrometer Chart"
+              style="box-shadow: 0 12px 32px rgba(0,0,0,0.05); border: 1px solid #eee; border-radius: 12px;">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="features features-alt fade-target" id="blizzard-section">
-      <div class="split-section layers-cluster">
-        <div class="content-block" style="margin-bottom: 0;">
-          <p class="section-label" id="b_l">Imaging</p>
-          <h2 class="section-title" id="b_t">The Power of Blizzard SR</h2>
-          <p class="section-desc" id="b_d">We've designed the Blizzard SR to have the best-in-class performance, featuring a far superior roll-off performance, high signal-to-noise, and an ideal point spread function. Research with the Blizzard SR has a much improved resolution of anatomical structures and improved homogeneity of spectra quality over varying depths.</p>
-          <a href="#" class="hero-link" style="font-size: 16px;" id="b_a">Blizzard SR Documentation →</a>
+    <footer>
+      <div class="footer-grid">
+        <div class="foot-col foot-main">
+          <div class="footer-logo-lockup"
+            style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+            <div class="mini-logo-svg"></div>
+            <span class="foot-logo fade-target" id="f_logo" style="margin-bottom: 0;">Opticent, Inc.</span>
+          </div>
+          <p class="foot-address">2510 Green Bay Rd<br>Evanston, IL 60201<br><br><a
+              href="mailto:info@opticenthealth.com" class="fade-target" id="f_email">info@opticenthealth.com</a></p>
         </div>
-        <div class="image-block">
-          <img id="blizzard_img" src="Images/Rolloff.png" alt="Blizzard SR Spectrometer Chart" style="box-shadow: 0 12px 32px rgba(0,0,0,0.05); border: 1px solid #eee; border-radius: 12px;">
+        <div class="foot-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="index.html#leadership">Leadership</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="technology.html">Technology</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+
+      <div class="foot-bottom">
+        <p>&copy; 2026 Opticent, Inc. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="foot-col foot-main">
-        <div class="footer-logo-lockup" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
-          <div class="mini-logo-svg"></div>
-          <span class="foot-logo fade-target" id="f_logo" style="margin-bottom: 0;">Opticent, Inc.</span>
-        </div>
-        <p class="foot-address">2510 Green Bay Rd<br>Evanston, IL 60201<br><br><a href="mailto:info@opticenthealth.com" class="fade-target" id="f_email">info@opticenthealth.com</a></p>
-      </div>
-      <div class="foot-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="index.html">About Us</a></li>
-          <li><a href="index.html#leadership">Leadership</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>Product</h4>
-        <ul>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="technology.html">Technology</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="foot-bottom">
-      <p>&copy; 2026 Opticent, Inc. All rights reserved.</p>
-    </div>
-  </footer>
-</div>
+  <script>
+    let mode = 'health';
+    const data = {
+      health: {
+        h1: 'What is Vis-OCT?',
+        sub: 'Visible-light optical coherence tomography (vis-OCT) is the latest development of OCT, providing new capabilities in anatomical and functional imaging of biological tissue.',
+        flow_title: 'What sets our technology apart?',
+        d1: '<p class="section-label">The Legacy</p><h3 class="feat-title">Standard OCT</h3><p class="feat-desc">Traditional OCT transformed clinical care, but its reliance on near-infrared light limits functional and anatomical data collection.</p>',
+        d2: '<p class="section-label">The Frontier</p><h3 class="feat-title">Vis-OCT</h3><p class="feat-desc">By shifting to visible light illumination, vis-OCT pushes past traditional boundaries, unlocking new capabilities for research and clinical care.</p>',
+        d3: '<p class="section-label">The Pioneers</p><h3 class="feat-title">Born from Research</h3><p class="feat-desc">Invented at Northwestern University in 2013 by Professor Hao F. Zhang\'s lab, vis-OCT powers the ultra-high resolution of our flagship Blizzard spectrometer.</p>',
 
-<script>
-  let mode = 'health';
-  const data = {
-    health: {
-      h1: 'What is Vis-OCT?', 
-      sub: 'Visible-light optical coherence tomography (vis-OCT) is the latest development of OCT, providing new capabilities in anatomical and functional imaging of biological tissue.',
-      flow_title: 'What sets our technology apart?',
-      d1: '<p class="section-label">The Legacy</p><h3 class="feat-title">Standard OCT</h3><p class="feat-desc">Traditional OCT transformed clinical care, but its reliance on near-infrared light limits functional and anatomical data collection.</p>',
-      d2: '<p class="section-label">The Frontier</p><h3 class="feat-title">Vis-OCT</h3><p class="feat-desc">By shifting to visible light illumination, vis-OCT pushes past traditional boundaries, unlocking new capabilities for research and clinical care.</p>',
-      d3: '<p class="section-label">The Pioneers</p><h3 class="feat-title">Born from Research</h3><p class="feat-desc">Invented at Northwestern University in 2013 by Professor Hao F. Zhang\'s lab, vis-OCT powers the ultra-high resolution of our flagship Blizzard spectrometer.</p>',
-      
-      // Health Images 
-      tech_hero_img: 'Images/Tech Hero2.png',
-      c1_img: 'Images/Functional.png',
-      c2_img: 'Images/Fundus.png',
-      c3_img: 'Images/Retinal.png',
-      blizzard_img: 'Images/Rolloff.png',
+        // Health Images 
+        tech_hero_img: 'Images/Tech Hero2.png',
+        c1_img: 'Images/Functional.png',
+        c2_img: 'Images/Fundus.png',
+        c3_img: 'Images/Retinal.png',
+        blizzard_img: 'Images/Rolloff.png',
 
-      c1l: 'Functional Imaging', c1t: 'Functional Imaging of the Retina', c1d: 'Thanks to the improved optical contract in the visible-light spectral range, our technology offers new functional analyses of the retina like no other.',
-      c2l: 'Small Animals', c2t: 'Revolutionary Small Animal Imaging', c2d: 'Our systems provide the best functional and anatomical ocular imaging of both anterior and posterior segments of small animal eyes.',
-      c3l: 'Retina', c3t: 'Highest Resolution Retinal Imaging', c3d: 'Our technology is capable of a 1.3 micrometer axial resolution in the human eye, nearly 3x higher than current state-of-the-art clinical OCTs.',
-      c4l: 'Research', c4t: 'Enabling Advanced Research', c4d: 'Our vis-OCT systems are currently being evaluated through IRB-approved research studies at major institutions worldwide. The unprecedented resolution and functional imaging capabilities are helping researchers better understand the mechanisms of blinding diseases.', c4a: 'View our research →',
-      b_l: 'Imaging', b_t: 'The Power of Blizzard SR', b_d: "We've designed the Blizzard SR to have the best-in-class performance, featuring a far superior roll-off performance, high signal-to-noise, and an ideal point spread function. Research with the Blizzard SR has a much improved resolution of anatomical structures and improved homogeneity of spectra quality over varying depths.", b_a: 'Blizzard SR Documentation →',
-      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com'
-    },
-    metro: {
-      h1: 'What is Optical Metrology?', sub: 'Optical metrology leverages light to establish precise measurements for industrial components. We utilize our background in Vis-OCT to deliver this on the next level.',
-      flow_title: 'What makes our systems stronger?',
-      d1: '<p class="section-label">Processing</p><h3 class="feat-title">Precise Depth Data</h3><p class="feat-desc">Our metrology systems utilize laser interferometry to provide precise measurements not only laterally, but also depth-wise.</p>',
-      d2: '<p class="section-label">Integrity</p><h3 class="feat-title">Non-Contact</h3><p class="feat-desc">Unlike tactile measuring machines, our optical systems gather millions of data points without deforming your parts.</p>',
-      d3: '<p class="section-label">Consistency</p><h3 class="feat-title">Repeatable Results</h3><p class="feat-desc">Our systems guarantee repeatable results and allow multi-trial analysis due to the non-invasive nature of optical metrology.</p>',
-      
-      // Metrology Images (Replace these paths with your actual metrology image files!)
-      tech_hero_img: 'Images/Tech Hero3.png', 
-      c1_img: 'Images/Micron.png', 
-      c2_img: 'Images/Roughness.png',
-      c3_img: 'Images/Throughput.png',
-      blizzard_img: 'Images/Cooperation.png',
+        c1l: 'Functional Imaging', c1t: 'Functional Imaging of the Retina', c1d: 'Thanks to the improved optical contract in the visible-light spectral range, our technology offers new functional analyses of the retina like no other.',
+        c2l: 'Small Animals', c2t: 'Revolutionary Small Animal Imaging', c2d: 'Our systems provide the best functional and anatomical ocular imaging of both anterior and posterior segments of small animal eyes.',
+        c3l: 'Retina', c3t: 'Highest Resolution Retinal Imaging', c3d: 'Our technology is capable of a 1.3 micrometer axial resolution in the human eye, nearly 3x higher than current state-of-the-art clinical OCTs.',
+        c4l: 'Research', c4t: 'Enabling Advanced Research', c4d: 'Our vis-OCT systems are currently being evaluated through IRB-approved research studies at major institutions worldwide. The unprecedented resolution and functional imaging capabilities are helping researchers better understand the mechanisms of blinding diseases.', c4a: 'View our research →',
+        b_l: 'Imaging', b_t: 'The Power of Blizzard SR', b_d: "We've designed the Blizzard SR to have the best-in-class performance, featuring a far superior roll-off performance, high signal-to-noise, and an ideal point spread function. Research with the Blizzard SR has a much improved resolution of anatomical structures and improved homogeneity of spectra quality over varying depths.", b_a: 'Blizzard SR Documentation →',
+        f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com'
+      },
+      metro: {
+        h1: 'What is Optical Metrology?', sub: 'Optical metrology leverages light to establish precise measurements for industrial components. We utilize our background in Vis-OCT to deliver this on the next level.',
+        flow_title: 'What makes our systems stronger?',
+        d1: '<p class="section-label">Processing</p><h3 class="feat-title">Precise Depth Data</h3><p class="feat-desc">Our metrology systems utilize laser interferometry to provide precise measurements not only laterally, but also depth-wise.</p>',
+        d2: '<p class="section-label">Integrity</p><h3 class="feat-title">Non-Contact</h3><p class="feat-desc">Unlike tactile measuring machines, our optical systems gather millions of data points without deforming your parts.</p>',
+        d3: '<p class="section-label">Consistency</p><h3 class="feat-title">Repeatable Results</h3><p class="feat-desc">Our systems guarantee repeatable results and allow multi-trial analysis due to the non-invasive nature of optical metrology.</p>',
 
-      c1l: 'Dimensional Metrology', c1t: 'Micron-Level Accuracy', c1d: 'Perfect for manufacturing where tolerances are tight and demanding. We work with you to determine the exact resolution you need.',
-      c2l: 'Surface Finish', c2t: 'Roughness Analysis', c2d: 'Characterize surface textures for a broad range of materials and extract critical roughness parameters with unprecedented resolution.',
-      c3l: 'Speed', c3t: 'Superior Throughput', c3d: 'Relative to tactile methods that are burdened by the movement of probes, our devices are faster and are constantly being optimized.',
-      c4l: 'Multi-Industry Use', c4t: 'Applicable In Any Field', c4d: 'Nearly every industry has a need for precise measurement and tolerances. Our technology fulfills that need and seamlessly integrates into diverse production environments and existing workflows.', c4a: '',
-      b_l: 'Custom Solutions', b_t: 'We build what you need.', b_d: "We work with companies directly to ensure we deliver exactly what they need. From start to finish, the design process is all about you.", b_a: 'Contact Us →',
-      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com'
-    }
-  };
+        // Metrology Images (Replace these paths with your actual metrology image files!)
+        tech_hero_img: 'Images/Tech Hero3.png',
+        c1_img: 'Images/Micron.png',
+        c2_img: 'Images/Roughness.png',
+        c3_img: 'Images/Throughput.png',
+        blizzard_img: 'Images/Cooperation.png',
 
-  function go(m, instant = false) {
-    if (m === mode && !instant) return;
-    mode = m; 
-    localStorage.setItem('opticent_mode', m);
-    
-    const d = data[m]; 
-    const sw = document.getElementById('sw'); 
-    const targets = document.querySelectorAll('.fade-target'); 
-    const isM = m === 'metro';
-
-    if (!instant) {
-      targets.forEach(t => { t.style.opacity = '0'; t.style.transform = 'translateY(4px)'; });
-    }
-
-    sw.className = 'sw' + (isM ? ' metro' : '');
-    document.getElementById('reel').style.transform = isM ? 'translateY(-18px)' : 'translateY(0)';
-    document.getElementById('lh').style.opacity = isM ? '0' : '1'; 
-    document.getElementById('lm').style.opacity = isM ? '1' : '0';
-    document.getElementById('bh').className = 'switch-btn' + (!isM ? ' sw-active-h' : ''); 
-    document.getElementById('bm').className = 'switch-btn' + (isM ? ' sw-active-m' : '');
-
-    const applyContent = () => {
-      // Safely apply SVG shape if it exists
-      if (document.getElementById('hShape') && d.shape) document.getElementById('hShape').setAttribute('d', d.shape);
-      
-      // Auto-map data keys to elements
-      Object.keys(d).forEach(id => {
-        const el = document.getElementById(id); 
-        if (el) {
-          // Check if the element is an image tag
-          if (el.tagName === 'IMG') {
-            el.src = d[id];
-          } else {
-            el.innerHTML = d[id];
-          }
-        }
-      });
-
-      const finalLink = document.getElementById('b_a');
-      if (finalLink) {
-        finalLink.href = isM ? 'contact.html' : '#';
+        c1l: 'Dimensional Metrology', c1t: 'Micron-Level Accuracy', c1d: 'Perfect for manufacturing where tolerances are tight and demanding. We work with you to determine the exact resolution you need.',
+        c2l: 'Surface Finish', c2t: 'Roughness Analysis', c2d: 'Characterize surface textures for a broad range of materials and extract critical roughness parameters with unprecedented resolution.',
+        c3l: 'Speed', c3t: 'Superior Throughput', c3d: 'Relative to tactile methods that are burdened by the movement of probes, our devices are faster and are constantly being optimized.',
+        c4l: 'Multi-Industry Use', c4t: 'Applicable In Any Field', c4d: 'Nearly every industry has a need for precise measurement and tolerances. Our technology fulfills that need and seamlessly integrates into diverse production environments and existing workflows.', c4a: '',
+        b_l: 'Custom Solutions', b_t: 'We build what you need.', b_d: "We work with companies directly to ensure we deliver exactly what they need. From start to finish, the design process is all about you.", b_a: 'Contact Us →',
+        f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com'
       }
-
-      targets.forEach(t => { t.style.opacity = '1'; t.style.transform = 'translateY(0)'; });
     };
 
-    if (instant) {
-      applyContent();
-    } else {
-      setTimeout(applyContent, 450); 
-    }
-  }
+    function go(m, instant = false) {
+      if (m === mode && !instant) return;
+      mode = m;
+      localStorage.setItem('opticent_mode', m);
 
-  // Execute immediately to prevent the blue-to-red transition flash
-  const saved = localStorage.getItem('opticent_mode'); 
-  if(saved === 'metro') { 
-    // Temporarily disable all CSS transitions
-    const style = document.createElement('style');
-    style.innerHTML = '* { transition: none !important;}';
-    document.head.appendChild(style);
-    
-    mode = 'health'; 
-    go('metro', true); 
-    
-    // Re-enable transitions once the browser paints the initial state
-    requestAnimationFrame(() => { 
-      requestAnimationFrame(() => { 
-        style.remove(); 
-      }); 
-    }); 
-  }
+      const d = data[m];
+      const sw = document.getElementById('sw');
+      const targets = document.querySelectorAll('.fade-target');
+      const isM = m === 'metro';
 
-  setTimeout(() => {
-    document.body.classList.add('ready');
-  }, 1000);
-
-  // --- Metrology Carousel Logic ---
-  let currentSlide = 0;
-  let slideInterval;
-  const totalSlides = 4;
-
-  function updateCarousel() {
-    const slides = document.getElementById('metro-slides');
-    if(!slides) return;
-    
-    // Slide transition
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    
-    // Dot and timer logic
-    const dots = document.querySelectorAll('.car-dot');
-    dots.forEach((dot, index) => {
-      dot.classList.remove('active');
-      // Trigger a DOM reflow so the 5s animation restarts cleanly
-      void dot.offsetWidth; 
-      if(index === currentSlide) {
-        dot.classList.add('active');
+      if (!instant) {
+        targets.forEach(t => { t.style.opacity = '0'; t.style.transform = 'translateY(4px)'; });
       }
+
+      sw.className = 'sw' + (isM ? ' metro' : '');
+      document.getElementById('reel').style.transform = isM ? 'translateY(-18px)' : 'translateY(0)';
+      document.getElementById('lh').style.opacity = isM ? '0' : '1';
+      document.getElementById('lm').style.opacity = isM ? '1' : '0';
+      document.getElementById('bh').className = 'switch-btn' + (!isM ? ' sw-active-h' : '');
+      document.getElementById('bm').className = 'switch-btn' + (isM ? ' sw-active-m' : '');
+
+      const applyContent = () => {
+        // Safely apply SVG shape if it exists
+        if (document.getElementById('hShape') && d.shape) document.getElementById('hShape').setAttribute('d', d.shape);
+
+        // Auto-map data keys to elements
+        Object.keys(d).forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            // Check if the element is an image tag
+            if (el.tagName === 'IMG') {
+              el.src = d[id];
+            } else {
+              el.innerHTML = d[id];
+            }
+          }
+        });
+
+        const finalLink = document.getElementById('b_a');
+        if (finalLink) {
+          finalLink.href = isM ? 'contact.html' : '#';
+        }
+
+        targets.forEach(t => { t.style.opacity = '1'; t.style.transform = 'translateY(0)'; });
+      };
+
+      if (instant) {
+        applyContent();
+      } else {
+        setTimeout(applyContent, 450);
+      }
+    }
+
+    // Execute immediately to prevent the blue-to-red transition flash
+    const saved = localStorage.getItem('opticent_mode');
+    if (saved === 'metro') {
+      // Temporarily disable all CSS transitions
+      const style = document.createElement('style');
+      style.innerHTML = '* { transition: none !important;}';
+      document.head.appendChild(style);
+
+      mode = 'health';
+      go('metro', true);
+
+      // Re-enable transitions once the browser paints the initial state
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          style.remove();
+        });
+      });
+    }
+
+    setTimeout(() => {
+      document.body.classList.add('ready');
+    }, 1000);
+
+    // --- Metrology Carousel Logic ---
+    let currentSlide = 0;
+    let slideInterval;
+    const totalSlides = 4;
+
+    function updateCarousel() {
+      const slides = document.getElementById('metro-slides');
+      if (!slides) return;
+
+      // Slide transition
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      // Dot and timer logic
+      const dots = document.querySelectorAll('.car-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        // Trigger a DOM reflow so the 5s animation restarts cleanly
+        void dot.offsetWidth;
+        if (index === currentSlide) {
+          dot.classList.add('active');
+        }
+      });
+    }
+
+    function moveSlide(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      updateCarousel();
+      resetInterval();
+    }
+
+    function setSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+      resetInterval();
+    }
+
+    function resetInterval() {
+      clearInterval(slideInterval);
+      // Move forward 1 slide automatically every 5000 milliseconds
+      slideInterval = setInterval(() => moveSlide(1), 5000);
+    }
+
+    // Initialize the carousel timer when page loads
+    document.addEventListener("DOMContentLoaded", () => {
+      resetInterval();
+      updateCarousel();
     });
-  }
-
-  function moveSlide(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    updateCarousel();
-    resetInterval();
-  }
-
-  function setSlide(index) {
-    currentSlide = index;
-    updateCarousel();
-    resetInterval();
-  }
-
-  function resetInterval() {
-    clearInterval(slideInterval);
-    // Move forward 1 slide automatically every 5000 milliseconds
-    slideInterval = setInterval(() => moveSlide(1), 5000);
-  }
-
-  // Initialize the carousel timer when page loads
-  document.addEventListener("DOMContentLoaded", () => {
-    resetInterval();
-    updateCarousel();
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
