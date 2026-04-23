@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opticent | Products</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Modernized custom styling for product pages */
+        .product-view { display: none; }
+        .product-view.active-view { display: block; }
+        
+        /* Unique animation for tab switching */
+        @keyframes tabFade { 
+            from { opacity: 0; } 
+            to { opacity: 1; } 
+        }
+
+        .product-view.active-view .hero-content,
+        .product-view.active-view .hero-visual,
+        .product-view.active-view .features {
+            animation: tabFade 0.6s ease-in-out !important;
+        }
+
+        /* Lock hero and image heights for seamless, jump-free transitions */
+        .product-view .hero { min-height: 600px; max-height: 600px; }
+        .product-hero-visual img {
+            height: 600px !important;     /* Increased from 420px */
+            max-height: 600px !important; /* Increased from 420px */
+            width: 100% !important;
+            object-fit: contain !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+        
+        .compare-table-wrapper { overflow-x: auto; margin-top: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #eee; }
+        .compare-table { width: 100%; border-collapse: collapse; background: #fff; min-width: 600px; }
+        .compare-table th, .compare-table td { padding: 1.25rem 1.5rem; text-align: left; border-bottom: 1px solid #eee; font-size: 14.5px; color: #333; }
+        .compare-table th { background: #f8faff; color: var(--bp); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+        .compare-table th:not(:first-child), .compare-table td:not(:first-child) { text-align: center; }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table tr:hover td { background: #fafcff; }
+        .check-icon { color: var(--ba); font-weight: bold; font-size: 1.2rem; display: inline-block; transform: scale(1.2); }
+        .doc-btn-group { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+
+<div class="sw" id="sw">
+  <script>
+    if (localStorage.getItem('opticent_mode') === 'metro') {
+      document.getElementById('sw').classList.add('metro');
+    }
+  </script>
+  
+  <nav id="nav">
+    <a href="index.html" class="logo-lockup">
+      <div class="logo-img-wrap">
+        <div class="logo-img logo-health" id="lh"><div class="logo-svg"></div></div>
+        <div class="logo-img logo-metro" id="lm"><div class="logo-svg"></div></div>
+      </div>
+      <div class="logo-text-wrap"><span class="logo-opticent">Opticent</span><div class="logo-division"><div class="slot-reel" id="reel"><span class="slot-word">Health</span><span class="slot-word">Metrology</span></div></div></div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="products.html" class="active-page">Products</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="switcher-pill">
+      <button class="switch-btn sw-active-h" id="bh" onclick="go('health')">Health</button>
+      <button class="switch-btn" id="bm" onclick="go('metro')">Metrology</button>
+    </div>
+  </nav>
+
+  
+  <div id="health-master">
+    <div class="product-tabs">
+      <div class="fade-target" style="display: flex; gap: 2rem; width: 100%;">
+        <a href="javascript:void(0)" class="tab-link active" onclick="switchHealthTab('aurora', this)">Aurora X4</a>
+        <a href="javascript:void(0)" class="tab-link" onclick="switchHealthTab('haloc', this)">HaloC 375</a>
+        <a href="javascript:void(0)" class="tab-link" onclick="switchHealthTab('halo', this)">Halo 375</a>
+      </div>
+    </div>
+
+    <div class="main-container">
+      
+      <div id="view-aurora" class="product-view active-view">
+        <div class="hero">
+          <div class="hero-content fade-target">
+            <p class="hero-eyebrow">Aurora X4</p>
+            <h1 class="hero-h1">Meet Human Clinical Research Excellency.</h1>
+            <p class="hero-sub">The Aurora X4 research system is a free-standing OCT imaging platform that offers a full complement of hardware and software for the imaging of the human eye in a clinical setting. Our instrument includes pupil monitoring and a NIR scanning laser ophthalmoscope for faster patient alignment and imaging.</p>
+            <div class="hero-actions" style="display: flex; gap: 1rem; margin-top: 2rem;">
+              <a href="contact.html" class="hero-cta">Request a Quote →</a>
+              <a href="#" class="hero-link-btn" style="padding: 12px 24px;">
+                <span>View Documentation →</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual product-hero-visual fade-target">
+            <img src="Images/AuroraX4Final.png" alt="Aurora X4 System">
+          </div>
+        </div>
+
+        <div class="features fade-target">
+          <div class="split-section layers-cluster">
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">Aurora Versus Competing OCTs</p>
+              <h2 class="section-title">It's not even close.</h2>
+              <p class="section-desc">When it comes to axial resolution, the Aurora X4 delivers clarity that standard commercial OCT systems simply cannot match. While other leading brands struggle to capture fine microstructural details, our advanced visible-light allows researchers to visualize distinct layers with absolute precision.</p>
+            </div>
+            <div class="image-block compare-img">
+              <img src="Images/Comparison.png" alt="Aurora Comparison">
+            </div>
+          </div>
+        </div>
+
+        <div class="features features-alt fade-target">
+          <div class="split-section">
+            <div class="image-block">
+              <img src="Images/Software.gif" alt="Customizable Software Interface">
+            </div>
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">Adaptable Workflow</p>
+              <h2 class="section-title">Intuitive Software</h2>
+              <p class="section-desc">Our software ecosystem is designed to be highly intuitive, streamlining your entire research process from start to finish. To ensure maximum performance and ease of use, we provide two dedicated applications: one optimized for seamless image acquisition, and another built specifically for advanced post-processing and analysis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="features fade-target">
+          <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); align-items: stretch; max-width: 1200px; margin: 0 auto; gap: 2rem;">
+            
+            <div class="feat-card" style="padding: 3rem; border: 1px solid #eee; display: flex; flex-direction: column;">
+              <p class="section-label">Aurora X4</p>
+              <h3 class="section-title" style="font-size: 24px; margin-bottom: 2rem;">Technical Specifications</h3>
+              <div class="specs-grid" style="gap: 1.5rem 2rem;">
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">Axial Resolution</div><div class="spec-value">1.3 μm in tissue</div></div>
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">Field of View</div><div class="spec-value">56° to pupil pivotal pt.</div></div>
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">Lateral Resolution</div><div class="spec-value">7 μm (FWHM)</div></div>
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">Depth of Imaging</div><div class="spec-value">1.1 mm in tissue</div></div>
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">Central Wavelength</div><div class="spec-value">560 nm</div></div>
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">Eye Exposure</div><div class="spec-value">< 250 μW</div></div>
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">A-Line Rate</div><div class="spec-value">50-125 KHz</div></div>
+                <div class="spec-item" style="padding: 1rem;"><div class="spec-label">Refractive Error</div><div class="spec-value">-12.5 to 7.5 D</div></div>
+              </div>
+            </div>
+
+            <div class="feat-card" style="padding: 3rem; border: 1px solid #eee; display: flex; flex-direction: column;">
+              <p class="section-label">Aurora X4</p>
+              <h3 class="section-title" style="font-size: 24px; margin-bottom: 2rem;">Key Capabilities</h3>
+              <ul class="capabilities-list" style="gap: 1.5rem; flex: 1;">
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Ultra high resolution anatomical imaging</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Customizable scanning protocols</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Inner/outer retinal sub layer delineation</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> High definition scan via speckle reduction</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fibergraphy (OCTF) for retinal ganglion analysis</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Pupil monitoring and NIR fundus camera</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Inner retinal oximetry</li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 3D vis-OCT data reconstruction/analysis</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="view-haloc" class="product-view">
+        <div class="hero">
+          <div class="hero-content fade-target">
+            <p class="hero-eyebrow">HaloC 375</p>
+            <h1 class="hero-h1">Revolutionizing Anterior Segment Imaging.</h1>
+            <p class="hero-sub">The HaloC 375 research system is a free-standing vis-OCT imaging platform for imaging the anterior segment of the eyes in small animals. The optical design provides for the addition of multiple modules for specific applications, higher resolution lens assembly for microscopic imaging, or standard lens assembly for a balance between field of view, imaging depth, and lateral resolution.</p>
+            <div class="hero-actions" style="display: flex; gap: 1rem; margin-top: 2rem;">
+              <a href="contact.html" class="hero-cta">Request a Quote →</a>
+              <a href="#" class="hero-link-btn" style="padding: 12px 24px;">
+                <span>View Documentation →</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual product-hero-visual fade-target">
+            <img src="Images/HaloC375Final.png" alt="HaloC 375 System">
+          </div>
+        </div>
+
+        <div class="features fade-target">
+          <div class="split-section">
+            <div class="image-block">
+              <img src="Images/Robot.png" alt="HaloC Robotic Arm Assembly">
+            </div>
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">HaloC 375</p>
+              <h2 class="section-title">Configurable Imaging</h2>
+              <p class="section-desc">The HaloC 375 is compatible with custom-made assemblies and robotic arms as well. Transform your imaging and our product with any free-form configuration you can think of.<br><br>The adjacent example showcases the use of a robotic arm in tandem with the HaloC 375 for free-form imaging. Please note, we do not provide such assemblies.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="features features-alt fade-target">
+          <div style="max-width: 1000px; margin: 0 auto;">
+            <div class="content-block" style="text-align: center; margin: 0 auto 3rem auto;">
+              <p class="section-label">Halo Series Comparison</p>
+              <h2 class="section-title">Varying applications, same ultra high resolution.</h2>
+              <p class="section-desc">Both models of our small animal imaging system have their own applications and strengths. What's shared between them, however, is the vis-OCT technology that powers us and sets us apart.</p>
+            </div>
+
+            <div class="compare-table-wrapper">
+              <table class="compare-table">
+                <tr><th>Feature</th><th>Halo 375</th><th>HaloC 375</th></tr>
+                <tr><td>Ultra high resolution anatomical imaging</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+                <tr><td>Vis-OCT imaging technology</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+                <tr><td>OCT angiography (OCT-A)</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+                <tr><td>Inner/outer retinal sub-layer delineation</td><td><span class="check-icon">✓</span></td><td></td></tr>
+                <tr><td>Fibergraphy (OCTF) for retinal ganglion cell axon analysis</td><td><span class="check-icon">✓</span></td><td></td></tr>
+                <tr><td>Inner retinal oximetry</td><td><span class="check-icon">✓</span></td><td></td></tr>
+                <tr><td>Optional multicolor confocal scanning laser ophthalmoscope (cSLO)</td><td><span class="check-icon">✓</span></td><td></td></tr>
+                <tr><td>Complete anterior segment imaging</td><td></td><td><span class="check-icon">✓</span></td></tr>
+                <tr><td>Multiple lens assemblies for varying applications</td><td></td><td><span class="check-icon">✓</span></td></tr>
+                <tr><td>Free-form imaging with optional robotic arm</td><td></td><td><span class="check-icon">✓</span></td></tr>
+                <tr><td>Outflow pathway imaging (collector channels/Schlemm's canal)</td><td></td><td><span class="check-icon">✓</span></td></tr>
+                <tr><td>Corneal imaging</td><td></td><td><span class="check-icon">✓</span></td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="view-halo" class="product-view">
+        <div class="hero">
+          <div class="hero-content fade-target">
+            <p class="hero-eyebrow">Halo 375</p>
+            <h1 class="hero-h1">Redefining Retinal Imaging.</h1>
+            <p class="hero-sub">The Halo 375 research system is a free-standing vis-OCT and cSLO imaging platform for retinal imaging in small animals. The optical design provides for the addition of multiple modules for specific applications, including a corneal imaging module and multiple choices of excitation lasers. Halo 375 OCT can be configured to provide up to two fluorescence channels in cSLO.</p>
+            <div class="hero-actions" style="display: flex; gap: 1rem; margin-top: 2rem;">
+              <a href="contact.html" class="hero-cta">Request a Quote →</a>
+              <a href="#" class="hero-link-btn" style="padding: 12px 24px;">
+                <span>View Documentation →</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual product-hero-visual fade-target">
+            <img src="Images/Halo375Final.png" alt="Halo 375 System">
+          </div>
+        </div>
+
+        <div class="features features-alt fade-target">
+          <div class="split-section reverse layers-cluster">
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">The Clearest Anatomical Resolution</p>
+              <h2 class="section-title">Image like never before.</h2>
+              <p class="section-desc">Powered by our best-in-class spectrometers, the Halo 375 provides an unmatched anatomical resolution for retinal imaging. Its visible-light OCT technology brings out subtle contrasts in both inner and outer retinal layers, revealing structures that conventional systems often miss.<br><br>Combined with advanced capabilities like angiography, fibergraphy, and inner-retinal oximetry, the Halo 375 gives researchers a richly detailed view of the eye.</p>
+            </div>
+            <div class="image-block layers-img">
+              <img src="Images/HaloLayers.png" alt="Halo Retina Scan">
+            </div>
+          </div>
+        </div>
+
+        <div class="features fade-target">
+          <div class="split-section">
+            <div class="image-block">
+              <img src="Images/HaloImages.png" alt="Halo Microvasculature Scan">
+            </div>
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">Halo 375</p>
+              <h2 class="section-title">The Finest Microvasculature Detail</h2>
+              <p class="section-desc">The Halo series devices feature the highest resolution imaging, powered by vis-OCT.<br><br>As pictured, the left image presents an en-face vis-OCT scan whereas the right image pictures a vis-OCTA angiographical scan. Both provide the finest retinal microvasculature detail in small animals - with this example using a mouse retina.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="metro-master" style="display: none;">
+    <div class="product-tabs">
+      <div class="fade-target" style="display: flex; gap: 2rem; width: 100%;">
+        <a href="javascript:void(0)" class="tab-link active" onclick="switchMetroTab('hardware', this)">Hardware</a>
+        <a href="javascript:void(0)" class="tab-link" onclick="switchMetroTab('software', this)">Software</a>
+      </div>
+    </div>
+
+    <div class="main-container">
+      
+      <div id="view-hardware" class="product-view active-view">
+        <div class="hero">
+          <div class="hero-content fade-target">
+            <p class="hero-eyebrow">Hardware</p>
+            <h1 class="hero-h1">Metrology Hardware</h1>
+            <p class="hero-sub">Placeholder text for the upcoming metrology hardware product lineup. Details, specifications, and configurations will be placed here.</p>
+          </div>
+          <div class="hero-visual product-hero-visual fade-target">
+            </div>
+        </div>
+        
+        <div class="features fade-target">
+          <div class="content-block">
+             <h2 class="section-title">Hardware specifics coming soon.</h2>
+             <p class="section-desc">Additional content blocks, comparison tables, and specification grids can be mapped out here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="view-software" class="product-view">
+        <div class="hero">
+          <div class="hero-content fade-target">
+            <p class="hero-eyebrow">Software</p>
+            <h1 class="hero-h1">Metrology Software</h1>
+            <p class="hero-sub">Placeholder text for the metrology software suite. Information regarding CAD overlays, point cloud processing, and UI features will be placed here.</p>
+          </div>
+          <div class="hero-visual product-hero-visual fade-target">
+             </div>
+        </div>
+        
+        <div class="features fade-target">
+          <div class="content-block">
+             <h2 class="section-title">Software specifics coming soon.</h2>
+             <p class="section-desc">Additional content blocks detailing analysis algorithms, automation workflows, and data export capabilities will go here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="foot-col foot-main">
+        <div class="footer-logo-lockup" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+          <div class="mini-logo-svg"></div>
+          <span class="foot-logo fade-target" id="f_logo" style="margin-bottom: 0;">Opticent, Inc.</span>
+        </div>
+        <p class="foot-address">2510 Green Bay Rd<br>Evanston, IL 60201<br><br><a href="mailto:info@opticenthealth.com" class="fade-target" id="f_email">info@opticenthealth.com</a></p>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html#leadership">Leadership</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="technology.html">Technology</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="foot-bottom">
+      <p>&copy; 2026 Opticent, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  let mode = 'health';
+
+  // Handles swapping between Aurora, HaloC, and Halo within the Health Section
+  function switchHealthTab(productId, el) {
+    // Update active tab styling
+    document.querySelectorAll('#health-master .tab-link').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+
+    // Hide all product views, show selected
+    document.querySelectorAll('#health-master .product-view').forEach(v => v.classList.remove('active-view'));
+    document.getElementById('view-' + productId).classList.add('active-view');
+  }
+
+  // Handles swapping between Scanners, CMM, and Software within the Metrology Section
+  function switchMetroTab(productId, el) {
+    // Update active tab styling
+    document.querySelectorAll('#metro-master .tab-link').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+
+    // Hide all product views, show selected
+    document.querySelectorAll('#metro-master .product-view').forEach(v => v.classList.remove('active-view'));
+    document.getElementById('view-' + productId).classList.add('active-view');
+  }
+
+  // Handles swapping between Health and Metrology site-wide modes
+  function go(m, instant = false) {
+    if (m === mode && !instant) return;
+    mode = m; 
+    localStorage.setItem('opticent_mode', m);
+    
+    const sw = document.getElementById('sw'); 
+    const isM = m === 'metro';
+
+    // Global visual toggles
+    sw.className = 'sw' + (isM ? ' metro' : '');
+    document.getElementById('reel').style.transform = isM ? 'translateY(-18px)' : 'translateY(0)';
+    document.getElementById('lh').style.opacity = isM ? '0' : '1'; 
+    document.getElementById('lm').style.opacity = isM ? '1' : '0';
+    document.getElementById('bh').className = 'switch-btn' + (!isM ? ' sw-active-h' : ''); 
+    document.getElementById('bm').className = 'switch-btn' + (isM ? ' sw-active-m' : '');
+    
+    // Update footer
+    document.getElementById('f_logo').innerText = isM ? 'Opticent, Inc.' : 'Opticent, Inc.';
+    document.getElementById('f_email').innerText = isM ? 'info@opticenthealth.com' : 'info@opticenthealth.com';
+    document.getElementById('f_email').href = isM ? 'mailto:info@opticenthealth.com' : 'mailto:info@opticenthealth.com';
+
+    if (instant) {
+      document.getElementById('health-master').style.display = isM ? 'none' : 'block';
+      document.getElementById('metro-master').style.display = isM ? 'block' : 'none';
+    } else {
+      // Fade out effect
+      const targets = document.querySelectorAll('.fade-target');
+      targets.forEach(t => { t.style.opacity = '0'; t.style.transform = 'translateY(4px)'; });
+
+      setTimeout(() => {
+        // Swap visibility
+        document.getElementById('health-master').style.display = isM ? 'none' : 'block';
+        document.getElementById('metro-master').style.display = isM ? 'block' : 'none';
+
+        // Force browser reflow to ensure animations trigger properly
+        void document.body.offsetHeight; 
+
+        // Fade in newly visible elements
+        targets.forEach(t => { 
+          const inHealth = t.closest('#health-master');
+          const inMetro = t.closest('#metro-master');
+
+          // Fade in if it's in the active container, OR if it's a global element outside of both
+          if ((inHealth && !isM) || (inMetro && isM) || (!inHealth && !inMetro)) {
+            t.style.opacity = '1'; t.style.transform = 'translateY(0)'; 
+          }
+        });
+      }, 400); 
+    }
+  }
+
+  // Execute immediately to prevent the blue-to-red transition flash
+  const saved = localStorage.getItem('opticent_mode'); 
+  if(saved === 'metro') { 
+    const style = document.createElement('style');
+    style.innerHTML = '* { transition: none !important;}';
+    document.head.appendChild(style);
+    
+    mode = 'health'; 
+    go('metro', true); 
+    
+    requestAnimationFrame(() => { 
+      requestAnimationFrame(() => { 
+        style.remove(); 
+      }); 
+    }); 
+  }
+  setTimeout(() => {
+    document.body.classList.add('ready');
+  }, 1000);
+</script>
+</body>
+</html>

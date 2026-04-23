@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opticent</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preload" href="Images/Header_Metro.gif" as="image">
+    <link rel="preload" href="Images/Header_Health.gif" as="image">
+</head>
+<body>
+
+<div class="sw" id="sw">
+  <script>
+    // This runs before the browser paints the screen, preventing the blue flash
+    if (localStorage.getItem('opticent_mode') === 'metro') {
+      document.getElementById('sw').classList.add('metro');
+    }
+  </script>
+  <nav id="nav">
+    <a href="index.html" class="logo-lockup">
+      <div class="logo-img-wrap">
+        <div class="logo-img logo-health" id="lh"><div class="logo-svg"></div></div>
+        <div class="logo-img logo-metro" id="lm"><div class="logo-svg"></div></div>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-opticent">Opticent</span>
+        <div class="logo-division">
+          <div class="slot-reel" id="reel">
+            <span class="slot-word">Health</span>
+            <span class="slot-word">Metrology</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active-page">About Us</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="switcher-pill">
+      <button class="switch-btn sw-active-h" id="bh" onclick="go('health')">Health</button>
+      <button class="switch-btn" id="bm" onclick="go('metro')">Metrology</button>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="hero">
+      <div class="hero-content fade-target">
+        <h1 class="hero-h1" id="h1">Pushing the bounds of<br>ocular imaging.</h1>
+        <p class="hero-sub" id="sub">We deliver visible-light optical coherence tomography technology, which offers the highest spatial resolution and imaging contrast in the market for clinical and preclinical use.</p>
+        <div class="hero-actions">
+          <button class="hero-cta" id="cta" onclick="window.location.href='technology.html'">Learn More →</button>
+          
+          <a href="#leadership" class="hero-link-btn fade-target">
+            <div class="avatar-stack">
+              <img src="images/leader1.jpg" alt="Leader">
+              <img src="images/leader2.jpg" alt="Leader">
+              <img src="images/leader3.jpg" alt="Leader">
+              <img src="images/leader4.jpg" alt="Leader">
+            </div>
+            <span id="hlink">Meet Opticent's Leadership →</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual fade-target">
+        <img id="hero_img" src="images/Header_Health.gif" alt="Hero Imaging">
+      </div>
+    </div>
+
+    <div class="features features-alt" style="padding-top: 3rem; padding-bottom: 4rem; text-align: center; overflow: hidden;">
+      <p class="section-label fade-target" id="plabel">Our Partners</p>
+      <h2 class="section-title fade-target" id="ptitle" style="font-size: 24px; margin-bottom: 3rem;">We're trusted by industry leaders worldwide.</h2>
+      
+      <div class="carousel-container fade-target" id="carousel-partners">
+        <div class="carousel-track">
+          <img src="images/Partner1.png" alt="Partner 1" class="carousel-logo">
+          <img src="images/Partner2.png" alt="Partner 2" class="carousel-logo">
+          <img src="images/Partner3.png" alt="Partner 3" class="carousel-logo">
+          <img src="images/Partner4.png" alt="Partner 4" class="carousel-logo">
+          <img src="images/Partner5.png" alt="Partner 5" class="carousel-logo">
+          <img src="images/Partner6.png" alt="Partner 6" class="carousel-logo">
+          <img src="images/Partner7.png" alt="Partner 7" class="carousel-logo">
+          <img src="images/Partner8.png" alt="Partner 8" class="carousel-logo">
+          <img src="images/Partner9.png" alt="Partner 9" class="carousel-logo">
+          <img src="images/Partner10.png" alt="Partner 10" class="carousel-logo">
+          <img src="images/Partner11.png" alt="Partner 11" class="carousel-logo">
+          <img src="images/Partner12.png" alt="Partner 12" class="carousel-logo">
+          <img src="images/Partner13.png" alt="Partner 13" class="carousel-logo">
+          <img src="images/Partner14.png" alt="Partner 14" class="carousel-logo">
+          <img src="images/Partner15.png" alt="Partner 15" class="carousel-logo">
+          <img src="images/Partner16.png" alt="Partner 16" class="carousel-logo">
+          <img src="images/Partner17.png" alt="Partner 17" class="carousel-logo">
+          
+          <img src="images/Partner1.png" alt="Partner 1" class="carousel-logo">
+          <img src="images/Partner2.png" alt="Partner 2" class="carousel-logo">
+          <img src="images/Partner3.png" alt="Partner 3" class="carousel-logo">
+          <img src="images/Partner4.png" alt="Partner 4" class="carousel-logo">
+          <img src="images/Partner5.png" alt="Partner 5" class="carousel-logo">
+          <img src="images/Partner6.png" alt="Partner 6" class="carousel-logo">
+          <img src="images/Partner7.png" alt="Partner 7" class="carousel-logo">
+          <img src="images/Partner8.png" alt="Partner 8" class="carousel-logo">
+          <img src="images/Partner9.png" alt="Partner 9" class="carousel-logo">
+          <img src="images/Partner10.png" alt="Partner 10" class="carousel-logo">
+          <img src="images/Partner11.png" alt="Partner 11" class="carousel-logo">
+          <img src="images/Partner12.png" alt="Partner 12" class="carousel-logo">
+          <img src="images/Partner13.png" alt="Partner 13" class="carousel-logo">
+          <img src="images/Partner14.png" alt="Partner 14" class="carousel-logo">
+          <img src="images/Partner15.png" alt="Partner 15" class="carousel-logo">
+          <img src="images/Partner16.png" alt="Partner 16" class="carousel-logo">
+          <img src="images/Partner17.png" alt="Partner 17" class="carousel-logo">
+        </div>
+      </div>
+
+      <div class="carousel-container fade-target" id="carousel-industries">
+        <div class="carousel-track track-industries">
+          <div class="industry-pill">Semiconductors</div>
+          <div class="industry-pill">Aerospace & Defense</div>
+          <div class="industry-pill">Medical Devices</div>
+          <div class="industry-pill">Optics & Photonics</div>
+          <div class="industry-pill">Automotive</div>
+          <div class="industry-pill">Consumer Electronics</div>
+          <div class="industry-pill">Precision Machining</div>
+          <div class="industry-pill">Displays & AR/VR</div>
+          <div class="industry-pill">Advanced Materials</div>
+          
+          <div class="industry-pill">Semiconductors</div>
+          <div class="industry-pill">Aerospace & Defense</div>
+          <div class="industry-pill">Medical Devices</div>
+          <div class="industry-pill">Optics & Photonics</div>
+          <div class="industry-pill">Automotive</div>
+          <div class="industry-pill">Consumer Electronics</div>
+          <div class="industry-pill">Precision Machining</div>
+          <div class="industry-pill">Displays & AR/VR</div>
+          <div class="industry-pill">Advanced Materials</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="spec-layout-wrapper" style="display: flex; gap: 4rem; max-width: 1300px; margin: 0 auto; align-items: flex-start;">
+  
+        <div class="spec-sidebar" style="flex: 0 0 300px; position: sticky; top: 100px;">
+          <p class="section-label fade-target" id="s_label">Performance</p>
+          <h2 class="section-title fade-target" id="s_title" style="font-size: 38px; line-height: 1.2;">Market-Leading Precision.</h2>
+          <p class="section-desc fade-target" id="s_desc" style="font-size: 15px; margin-top: 1rem;">
+            Our vis-OCT technology redefined the limits of axial resolution and imaging speed. Explore the core specifications that power our clinical and research platforms.
+          </p>
+        </div>
+
+        <div class="cards-grid fade-target" style="flex: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          
+          <div class="feat-card" style="border-top: 4px solid var(--ba); padding: 2.5rem 2rem;">
+            <div id="stat1_label" style="font-size: 11px; font-weight: 700; color: var(--bp); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">Axial Resolution</div>
+            <div id="stat1_val" style="font-family: 'Outfit', sans-serif; font-size: 42px; font-weight: 300; color: #1a1a2e; margin-bottom: 0.5rem;">1.3 μm</div>
+            <p id="stat1_desc" class="feat-desc">Unprecedented clarity in tissue imaging, nearly 3x higher than current state-of-the-art clinical OCTs.</p>
+          </div>
+
+          <div class="feat-card" style="border-top: 4px solid var(--ba); padding: 2.5rem 2rem;">
+            <div id="stat2_label" style="font-size: 11px; font-weight: 700; color: var(--bp); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">Scanning Angle</div>
+            <div id="stat2_val" style="font-family: 'Outfit', sans-serif; font-size: 42px; font-weight: 300; color: #1a1a2e; margin-bottom: 0.5rem;">56°</div>
+            <p id="stat2_desc" class="feat-desc">Wide-field coverage extending to the pupil pivotal point for comprehensive retinal diagnostics.</p>
+          </div>
+
+          <div class="feat-card" style="border-top: 4px solid var(--ba); padding: 2.5rem 2rem;">
+            <div id="stat3_label" style="font-size: 11px; font-weight: 700; color: var(--bp); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">A-Line Rate</div>
+            <div id="stat3_val" style="font-family: 'Outfit', sans-serif; font-size: 42px; font-weight: 300; color: #1a1a2e; margin-bottom: 0.5rem;">125 KHz</div>
+            <p id="stat3_desc" class="feat-desc">Ultra-fast acquisition speeds powered by our flagship Blizzard spectrometer for rapid alignment.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="features features-alt">
+      <div class="split-section reverse fade-target">
+        <div class="content-block" style="margin-bottom: 0;">
+          <p class="section-label" id="p_label">Our Products</p>
+          <h2 class="section-title" id="p_title">We Develop Imaging Tools</h2>
+          <p class="section-desc" id="p_desc">Our tools aide top specialists in human clinical research, small animal ophthalmic research, metrology, and high performance spectrometry.<br>Put simply, our experts can fulfill your imaging needs.</p>
+          <button class="hero-cta" id="p_cta" style="background: var(--bnav); color: #fff;" onclick="window.location.href='products.html'">View our products →</button>
+        </div>
+        <div class="image-block">
+          <img id="products_img" src="Images/Aurora.png" alt="Opticent Products">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="leadership" class="features" style="scroll-margin-top: 4rem;">
+    <div style="max-width: 1600px; margin: 0 auto;">
+    
+      <div class="content-block" style="text-align: center; margin: 0 auto 3rem auto;">
+        <p class="section-label fade-target" id="l_label">Leadership</p>
+        <h2 class="section-title fade-target" id="l_title" style="margin-bottom: 0;">Meet the Pioneers</h2>
+      </div>
+      
+      <div class="cards-grid fade-target" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+        
+        <div class="feat-card" style="text-align: center;">
+          <img src="images/leader1.jpg" alt="Leader 1" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 class="feat-title">Hao F. Zhang, Ph.D.</h3>
+          <p class="section-label" style="margin-bottom: 1rem;">CHAIR OF THE BOARD, CO-FOUNDER</p>
+          <p class="feat-desc">Professor of Biomedical Engineering and Ophthalmology at Northwestern University and co-inventor of Opticent's core technologies. As an R&D lead, he coordinates novel ophthalmologic imaging research and product development. Dr. Zhang holds a Ph.D. from Texas A&M, brings extensive expertise in biomedical optics and OCT, and has earned prestigious accolades including the NIH IMPACT award and the NAS Cozzarelli Prize.</p>
+        </div>
+
+        <div class="feat-card" style="text-align: center;">
+          <img src="images/leader2.jpg" alt="Leader 2" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 class="feat-title">Cheng Sun, Ph.D.</h3>
+          <p class="section-label" style="margin-bottom: 1rem;">CO-FOUNDER</p>
+          <p class="feat-desc">Professor of Mechanical Engineering at Northwestern University and co-inventor of Opticent's core technologies. With over a decade of expertise in optics and advanced manufacturing, Dr. Sun co-leads R&D efforts in ophthalmic imaging research, product development, and grant acquisition. He holds a Ph.D. from Pennsylvania State University and concurrently directs pioneering, NSF-funded nanophotonics research at Northwestern.</p>
+        </div>
+
+        <div class="feat-card" style="text-align: center;">
+          <img src="images/leader3.jpg" alt="Leader 3" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 class="feat-title">Joel S. Schuman, M.D.</h3>
+          <p class="section-label" style="margin-bottom: 1rem;">BOARD MEMBER</p>
+          <p class="feat-desc">Dr. Schuman leads the Advanced Ophthalmic Imaging Laboratory (AOIL), directing a multidisciplinary team of ophthalmologists, experts, software specialists, and statisticians. His research primarily focuses on the study of glaucoma, a leading cause of global blindness. He and his colleagues pioneer the development of advanced imaging tools designed to accurately diagnose this debilitating disease, monitor its progression, and investigate its underlying pathogenesis.</p>
+        </div>
+
+        <div class="feat-card" style="text-align: center;">
+          <img src="images/leader4.jpg" alt="Leader 4" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 class="feat-title">Nicholas J. Volpe, M.D.</h3>
+          <p class="section-label" style="margin-bottom: 1rem;">BOARD MEMBER</p>
+          <p class="feat-desc">Professor and Chairman of the Department of Ophthalmology at Northwestern University’s Feinberg School of Medicine. Earning his credentials at Harvard Medical School, Dr. Volpe transformed Northwestern’s department into a premier research institution. His clinical and research interests include neuro-ophthalmic disorders, vis-OCT, and optic nerve disease. He serves on numerous boards, including the American Ophthalmological Society and the Heed Foundation.</p>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="foot-col foot-main">
+        <div class="footer-logo-lockup" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+          <div class="mini-logo-svg"></div>
+          <span class="foot-logo fade-target" id="f_logo" style="margin-bottom: 0;">Opticent, Inc.</span>
+        </div>
+        <p class="foot-address">2510 Green Bay Rd<br>Evanston, IL 60201<br><br><a href="mailto:info@opticenthealth.com" class="fade-target" id="f_email">info@opticenthealth.com</a></p>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html#leadership">Leadership</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="technology.html">Technology</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="foot-bottom">
+      <p>&copy; 2026 Opticent, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  let mode = 'health';
+  const data = {
+    health: {
+      // --- TEXT CONTENT ---
+      h1: 'Pushing the bounds of<br>ocular imaging.',
+      sub: 'We deliver visible-light optical coherence tomography technology, which offers the highest spatial resolution and imaging contrast in the market for clinical and preclinical use.',
+      cta: 'Learn More →', hlink: "Meet Opticent's Leadership →",
+      plabel: 'Our Partners', ptitle: "We're trusted by industry leaders worldwide.",
+      a_label: 'About Us', a_title: 'Innovating for Ophthalmic Research', a_desc: 'We strive to position our revolutionary imaging technology at the forefront of disease assessment and ophthalmic research. With a decade of experience, we aim to transform the standard of care with innovative tools that will enable unprecedented insight into the origins and treatment of blinding diseases such as Glaucoma.',
+      p_label: 'Our Products', p_title: 'We Develop Imaging Tools', p_desc: 'Our tools aide top specialists in human clinical research, small animal ophthalmic research, metrology, and high performance spectrometry.<br>Put simply, our experts can fulfill your imaging needs.', p_cta: 'View our products →',
+      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com',
+      l_label: 'Leadership', 
+      l_title: 'Meet the Pioneers',
+      s_label: 'Performance', 
+      s_title: 'Market-Leading Precision.', 
+      s_desc: 'Our vis-OCT technology redefined the limits of axial resolution and imaging speed. Explore the core specifications that power our clinical and research platforms.',
+      stat1_label: 'Axial Resolution', stat1_val: '1.3 μm', stat1_desc: 'Unprecedented clarity in tissue imaging, nearly 3x higher than current state-of-the-art clinical OCTs.',
+      stat2_label: 'Scanning Angle', stat2_val: '56°', stat2_desc: 'Wide-field coverage extending to the pupil pivotal point for comprehensive retinal diagnostics.',
+      stat3_label: 'A-Line Rate', stat3_val: '125 KHz', stat3_desc: 'Ultra-fast acquisition speeds powered by our flagship Blizzard spectrometer for rapid alignment.',
+      
+      // --- IMAGE PATHS (Update these with your actual filenames) ---
+      hero_img_src: 'Images/Header_Health.gif',
+      about_img_src: 'Images/Innovating.png',
+      products_img_src: 'Images/Aurora.png'
+    },
+    metro: {
+      // --- TEXT CONTENT ---
+      h1: 'Validate your products<br>with certainty.',
+      sub: 'Our metrology devices are precise imaging instruments that are capable of micron-level resolution - capturing incredible depth information simultaneously and non-invasively.',
+      cta: 'View Capabilities →', hlink: "Meet Opticent's Experts →",
+      plabel: 'Applicable Industries', 
+      ptitle: 'Precision metrology for critical applications.',
+      p_label: 'Our Solutions', p_title: 'Tailored to Your Needs', p_desc: 'Talk to our experts to determine what your company needs, we will work with you to deliver unbeatable imaging resolution no matter what the application is.', p_cta: 'View our services →',
+      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com',
+      l_label: 'Experts', 
+      l_title: 'Meet Our Experts',
+      s_label: 'Performance', 
+      s_title: 'Industrial Reliability.', 
+      s_desc: 'Our metrology devices deliver micron-level accuracy without compromising your product.',
+      stat1_label: 'Placeholder Stat 1', stat1_val: '0.00', stat1_desc: 'This is a temporary description for metrology placeholder stat 1.',
+      stat2_label: 'Placeholder Stat 2', stat2_val: '0.00', stat2_desc: 'This is a temporary description for metrology placeholder stat 2.',
+      stat3_label: 'Placeholder Stat 3', stat3_val: '0.00', stat3_desc: 'This is a temporary description for metrology placeholder stat 3.',
+      
+      // --- IMAGE PATHS (Update these with your actual filenames) ---
+      hero_img_src: 'Images/Header_Metro.gif',
+      about_img_src: 'Images/Tailored.png',
+      products_img_src: 'Images/Tailored.png'
+    }
+  };
+
+  function go(m, instant = false) {
+    if (m === mode && !instant) return;
+    mode = m; 
+    localStorage.setItem('opticent_mode', m);
+    
+    const d = data[m]; 
+    const sw = document.getElementById('sw'); 
+    const targets = document.querySelectorAll('.fade-target'); 
+    const isM = m === 'metro';
+
+    if (!instant) {
+      targets.forEach(t => { t.style.opacity = '0'; t.style.transform = 'translateY(4px)'; });
+    }
+
+    sw.className = 'sw' + (isM ? ' metro' : '');
+    document.getElementById('reel').style.transform = isM ? 'translateY(-18px)' : 'translateY(0)';
+    document.getElementById('lh').style.opacity = isM ? '0' : '1'; 
+    document.getElementById('lm').style.opacity = isM ? '1' : '0';
+    document.getElementById('bh').className = 'switch-btn' + (!isM ? ' sw-active-h' : ''); 
+    document.getElementById('bm').className = 'switch-btn' + (isM ? ' sw-active-m' : '');
+
+    const applyContent = () => {
+      // Update text elements
+      ['h1','sub','cta','hlink','plabel','ptitle','a_label','a_title','a_desc','p_label','p_title','p_desc','p_cta','f_logo','f_email', 'l_label', 'l_title', 's_label', 's_title', 's_desc', 'stat1_label', 'stat1_val', 'stat1_desc', 'stat2_label', 'stat2_val', 'stat2_desc', 'stat3_label', 'stat3_val', 'stat3_desc'].forEach(id => {
+        const el = document.getElementById(id); 
+        if (el) el.innerHTML = d[id];
+      });
+      
+      // Update image sources
+      if (document.getElementById('hero_img')) document.getElementById('hero_img').src = d.hero_img_src;
+      if (document.getElementById('about_img')) document.getElementById('about_img').src = d.about_img_src;
+      if (document.getElementById('products_img')) document.getElementById('products_img').src = d.products_img_src;
+
+      targets.forEach(t => { t.style.opacity = ''; t.style.transform = ''; });
+    };
+
+    if (instant) {
+      applyContent();
+    } else {
+      setTimeout(applyContent, 450); 
+    }
+  }
+
+  // Prevent flash on load
+  const saved = localStorage.getItem('opticent_mode'); 
+  if(saved === 'metro') { 
+    const style = document.createElement('style');
+    style.innerHTML = '* { transition: none !important;}';
+    document.head.appendChild(style);
+    
+    mode = 'health'; 
+    go('metro', true); 
+    
+    requestAnimationFrame(() => { 
+      requestAnimationFrame(() => { 
+        style.remove(); 
+      }); 
+    }); 
+  }
+
+  setTimeout(() => {
+    document.body.classList.add('ready');
+  }, 1000);
+</script>
+
+
+</body>
+</html>

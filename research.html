@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opticent | Research</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .research-paper-item {
+            padding: 2rem 2.5rem;
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-paper-item::before {
+            content: '';
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            height: 4px;
+            background: var(--ba);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .research-paper-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+            border-color: #ddd;
+        }
+
+        .research-paper-item:hover::before {
+            opacity: 1;
+        }
+
+        .paper-meta {
+            display: inline-block;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--bp);
+            font-weight: 700;
+            margin-bottom: .75rem;
+            background: rgba(21, 101, 192, 0.08);
+            padding: 6px 12px;
+            border-radius: 6px;
+            align-self: flex-start;
+        }
+
+        .paper-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        .paper-title a {
+            color: #1a1a2e;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            display: block; /* Makes the whole title block clickable */
+        }
+
+        .paper-title a:hover {
+            color: var(--bp);
+        }
+
+        @media (max-width: 900px) {
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sw" id="sw">
+  <script>
+    if (localStorage.getItem('opticent_mode') === 'metro') {
+      document.getElementById('sw').classList.add('metro');
+    }
+  </script>
+  <nav id="nav">
+    <a href="index.html" class="logo-lockup">
+      <div class="logo-img-wrap">
+        <div class="logo-img logo-health" id="lh"><div class="logo-svg"></div></div>
+        <div class="logo-img logo-metro" id="lm"><div class="logo-svg"></div></div>
+      </div>
+      <div class="logo-text-wrap"><span class="logo-opticent">Opticent</span><div class="logo-division"><div class="slot-reel" id="reel"><span class="slot-word">Health</span><span class="slot-word">Metrology</span></div></div></div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="research.html" class="active-page">Research</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="switcher-pill">
+      <button class="switch-btn sw-active-h" id="bh" onclick="go('health')">Health</button>
+      <button class="switch-btn" id="bm" onclick="go('metro')">Metrology</button>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="hero" style="min-height: 350px;">
+      <div class="hero-content fade-target" style="align-items: center; text-align: center; padding: 6rem 2rem;">
+        <h1 class="hero-h1" id="h1">Research Publications</h1>
+        <p class="hero-sub" id="sub" style="margin: 0 auto;">Explore our extensive portfolio of peer-reviewed publications and clinical studies advancing visible-light OCT technology.</p>
+      </div>
+    </div>
+
+    <div class="features features-alt fade-target" id="health-research-list" style="padding-top: 5rem; padding-bottom: 6rem;">
+      <div class="research-grid">
+        
+        <div class="research-paper-item">
+            <span class="paper-meta">Nov 2025 | Applied Optics</span>
+            <h3 class="paper-title"><a href="https://www.researchgate.net/publication/397624967_Two-color_fluorescence_scanning_laser_ophthalmoscopy_2_for_in_vivo_mouse_retinal_ganglion_cell_RGC_imaging_at_3_the_single-cell_level" target="_blank" rel="noopener noreferrer">Two-Color fluorescence scanning laser ophthalmoscopy for in vivo mouse retinal ganglion cell (RGC) imaging at the single-cell level</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jun 2025 | IEEE Transactions on Medical Imaging</span>
+            <h3 class="paper-title"><a href="https://ieeexplore.ieee.org/document/11037773" target="_blank" rel="noopener noreferrer">Robotic optical coherence tomography with expanded three-dimensional field-of-view using point-cloud-based volumetric montaging</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Feb 2025 | Investigative Ophthalmology & Visual Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2802600" target="_blank" rel="noopener noreferrer">Robotic visible-light optical coherence tomography visualizes segmental Schlemms canal anatomy and segmental pilocarpine response</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jan 2025 | Optics Letters</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/ol/abstract.cfm?uri=ol-50-3-928" target="_blank" rel="noopener noreferrer">Swept-source visible-light optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jul 2024 | Case Reports in Ophthalmological Medicine</span>
+            <h3 class="paper-title"><a href="https://onlinelibrary.wiley.com/doi/10.1155/2024/5823455" target="_blank" rel="noopener noreferrer">Hyperreflective Dots in Central Fovea Visualized by a Novel Application of Visible-light Optical Coherence Tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Mar 2024 | IEEE Transactions on Medical Imaging</span>
+            <h3 class="paper-title"><a href="https://ieeexplore.ieee.org/document/10478279" target="_blank" rel="noopener noreferrer">Visible-light optical coherence tomography fibergraphy of the tree shrew retinal ganglion cell axon bundles</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jan 2024 | Biomedical Optics Express</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-15-2-1102" target="_blank" rel="noopener noreferrer">Multiscale imaging of corneal endothelium damage and ROCK-inhibitor treatment in mouse models of acute ocular hypertension</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Sep 2023 | Biomedical Optics Express</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-14-10-5208" target="_blank" rel="noopener noreferrer">Adaptive balanced detection spectral domain optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jun 2023 | Journal of Visualized Experiments</span>
+            <h3 class="paper-title"><a href="https://dx.doi.org/10.3791/65237" target="_blank" rel="noopener noreferrer">Alignment of visible-light optical coherence tomography fibergram with confocal images of the same mouse retina</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">May 2023 | Review of Scientific Instruments</span>
+            <h3 class="paper-title"><a href="https://tvst.arvojournals.org/article.aspx?articleid=2785609" target="_blank" rel="noopener noreferrer">Longitudinal Analysis of Retinal Ganglion Cell Damage at Individual Axon Bundle Level in Mice Using Visible-Light Optical Coherence Tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Feb 2023 | Review of Scientific Instruments</span>
+            <h3 class="paper-title"><a href="http://doi.org/10.1063/5.0122692" target="_blank" rel="noopener noreferrer">Design strategy for a dual-wedge prism imaging spectrometer in spectroscopic nanoscopy</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jan 2023 | Neural Regeneration Research</span>
+            <h3 class="paper-title"><a href="https://journals.lww.com/nrronline/fulltext/2023/01000/characterization_of_retinal_ganglion_cell_damage.30.aspx" target="_blank" rel="noopener noreferrer">Characterization of retinal ganglion cell damage at single axon bundle level in mice by visible-light optical coherence tomography fibergraphy</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Aug 2022 | BME Frontiers</span>
+            <h3 class="paper-title"><a href="https://spj.science.org/doi/10.34133/2022/9891510" target="_blank" rel="noopener noreferrer">High-frequency three-dimensional photoacoustic computed tomography using an optical micro-ring resonator</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Nov 2022 | Experimental Eye Research</span>
+            <h3 class="paper-title"><a href="https://ajp.amjpathol.org/article/S0002-9440(22)00212-7/fulltext" target="_blank" rel="noopener noreferrer">Platelet endothelial cell adhesion molecule blockade modulates neutrophil recruitment patterns and reduces infarct size in experimental ischemic stroke</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">May 2022 | Experimental Eye Research</span>
+            <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0014483522000938?via%3Dihub" target="_blank" rel="noopener noreferrer">Long-term retinal protection by MEK inhibition in Pax6 haploinsufficiency mice</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jan 2022 | IEEE Transactions on Medical Imaging</span>
+            <h3 class="paper-title"><a href="https://ieeexplore.ieee.org/document/9696252" target="_blank" rel="noopener noreferrer">High-Speed balanced-detection visible-light optical coherence tomography in the human retina using subpixel spectrometer calibration</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jan 2022 | Investigative Ophthalmology & Visual Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2778263" target="_blank" rel="noopener noreferrer">In vivo sublayer analysis of human retinal inner plexiform layer obtained by visible-light optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Dec 2021 | Journal of Neuroscience</span>
+            <h3 class="paper-title"><a href="https://www.jneurosci.org/content/41/49/10179.abstract" target="_blank" rel="noopener noreferrer">Global and regional damages in retinal ganglion cell axon bundles monitored non-invasively by visible-light optical coherence tomography fibergraphy</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jun 2021 | Experimental Eye Research</span>
+            <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0014483521003225" target="_blank" rel="noopener noreferrer">In vivo imaging of the inner retinal layer structure in mice after eye-opening using visible-light optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jun 2021 | Experimental Eye Research</span>
+            <h3 class="paper-title"><a href="https://www.biorxiv.org/content/10.1101/2021.05.28.446197v1.abstract" target="_blank" rel="noopener noreferrer">Adaptive spectroscopic visible-light optical coherence tomography for human retinal oximetry</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jun 2021 | Biomedical Optics Express</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-12-1-110&id=444341&ibsearch=false" target="_blank" rel="noopener noreferrer">Intrinsic spectrally-dependent background in spectroscopic visible-light optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Oct 2020 | Translational Vision Science & Technology</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2770901" target="_blank" rel="noopener noreferrer">Visible-light optical coherence tomography fibergraphy for quantitative imaging of retinal ganglion cell axon bundles</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">May 2020 | Optics Letters</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/ol/abstract.cfm?uri=ol-45-9-2680" target="_blank" rel="noopener noreferrer">Spectrally dependent roll-off in visible-light optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Apr 2020 | Optical Coherence Tomography</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/abstract.cfm?uri=OCT-2020-OW4E.2&ibsearch=false" target="_blank" rel="noopener noreferrer">The visible-light optical coherence tomography fibergram</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Apr 2020 | Optical Coherence Tomography</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/abstract.cfm?uri=OCT-2020-OW4E.6&ibsearch=false" target="_blank" rel="noopener noreferrer">Adaptive spectroscopic visible-light optical coherence tomography for robust clinical retinal oximetry</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Apr 2020 | Optical Coherence Tomography</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/abstract.cfm?uri=OCT-2020-OW4E.3&ibsearch=false" target="_blank" rel="noopener noreferrer">Circumlimbal scanning of Schelmm’s canal in mouse using visible-light OCT</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Feb 2020 | Investigative Ophthalmology & Visual Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2761682" target="_blank" rel="noopener noreferrer">In vivo imaging of Schlemm’s canal and limbal vascular network in mouse using visible-light OCT</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Oct 2019 | Bioinformatics</span>
+            <h3 class="paper-title"><a href="https://www.spiedigitallibrary.org/journals/neurophotonics/volume-6/issue-4/041107/Speckle-reduction-in-visible-light-optical-coherence-tomography-using-scan/10.1117/1.NPh.6.4.041107.short" target="_blank" rel="noopener noreferrer">Speckle reduction in visible-light optical coherence tomography using scan modulation</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Oct 2019 | Optical Coherence Tomography</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-10-10-5235&id=420715&ibsearch=false" target="_blank" rel="noopener noreferrer">Longitudinal deep-brain imaging in mouse using visible-light optical coherence tomography through chronic microprism cranial window</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jul 2019 | Investigative Ophthalmology & Visual Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2741771" target="_blank" rel="noopener noreferrer">Advanced image processing for visible-light OCT oximetry in rodents</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jul 2019 | Optical Coherence Tomography</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2745929" target="_blank" rel="noopener noreferrer">Speckle Noise Reduction in Visible-Light OCT</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jul 2019 | Investigative Ophthalmology & Visual Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2742039" target="_blank" rel="noopener noreferrer">Relating Vis-OCT Measurements of Retinal SO2 to Microelectrode Measurements of PO2</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jul 2019 | Investigative Ophthalmology & Visual Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2745838" target="_blank" rel="noopener noreferrer">Imaging the Entire Schlemm’s Canal with Visible-Light OCT and Visible-Light OCTA in Mouse</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Jul 2019 | Investigative Ophthalmology & Visual Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2746411" target="_blank" rel="noopener noreferrer">Intra- and Inter-Subject Variability of Retinal Oximetry on Healthy Eyes Using Visible-Light OCT</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Oct 2017 | Journal of Biomedical Optics</span>
+            <h3 class="paper-title"><a href="https://pubmed.ncbi.nlm.nih.gov/29043714/" target="_blank" rel="noopener noreferrer">Spectroscopic Doppler analysis for visible-light optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Mar 2017 | Biomedical Optics Express</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-8-3-1415&id=359845" target="_blank" rel="noopener noreferrer">Retinal oximetry in humans using visible-light optical coherence tomography</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Feb 2017 | Investigative Opthalmology & Vision Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2603132" target="_blank" rel="noopener noreferrer">Increased inner retinal oxygen metabolism precedes microvascular alterations in rodent model with Type 1 diabetic mice</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Oct 2016 | Investigative Opthalmology & Vision Science</span>
+            <h3 class="paper-title"><a href="https://iovs.arvojournals.org/article.aspx?articleid=2577329" target="_blank" rel="noopener noreferrer">Optical detection of early damages in retinal ganglion cells in a mouse model of partial optic nerve crush injury</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Oct 2015 | Biomedical Optics Express</span>
+            <h3 class="paper-title"><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-6-10-3701&id=324790" target="_blank" rel="noopener noreferrer">Human retinal imaging using visible-light optical coherence tomography guided by scanning laser ophthalmoscopy</a></h3>
+        </div>
+
+        <div class="research-paper-item">
+            <span class="paper-meta">Sep 2015 | Biomedical Optics Express</span>
+            <h3 class="paper-title"><a href="https://www.nature.com/articles/lsa2015107" target="_blank" rel="noopener noreferrer">Visible light optical coherence tomography measures retinal oxygen metabolic response to systemic oxygenation</a></h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="foot-col foot-main">
+        <div class="footer-logo-lockup" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+          <div class="mini-logo-svg"></div>
+          <span class="foot-logo fade-target" id="f_logo" style="margin-bottom: 0;">Opticent, Inc.</span>
+        </div>
+        <p class="foot-address">2510 Green Bay Rd<br>Evanston, IL 60201<br><br><a href="mailto:info@opticenthealth.com" class="fade-target" id="f_email">info@opticenthealth.com</a></p>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html#leadership">Leadership</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="technology.html">Technology</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="foot-bottom">
+      <p>&copy; 2026 Opticent, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  let mode = 'health';
+  const data = {
+    health: {
+      h1: 'Research Publications', 
+      sub: 'Explore our extensive portfolio of peer-reviewed publications and clinical studies advancing visible-light OCT technology.',
+      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com'
+    },
+    metro: {
+      h1: 'Case Studies', 
+      sub: 'Metrology-specific studies coming soon.',
+      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com'
+    }
+  };
+
+  function go(m, instant = false) {
+    if (m === mode && !instant) return;
+    mode = m; 
+    localStorage.setItem('opticent_mode', m);
+    
+    const d = data[m]; 
+    const sw = document.getElementById('sw'); 
+    const targets = document.querySelectorAll('.fade-target'); 
+    const isM = m === 'metro';
+
+    if (!instant) {
+      targets.forEach(t => { t.style.opacity = '0'; t.style.transform = 'translateY(4px)'; });
+    }
+
+    sw.className = 'sw' + (isM ? ' metro' : '');
+    document.getElementById('reel').style.transform = isM ? 'translateY(-18px)' : 'translateY(0)';
+    document.getElementById('lh').style.opacity = isM ? '0' : '1'; 
+    document.getElementById('lm').style.opacity = isM ? '1' : '0';
+    document.getElementById('bh').className = 'switch-btn' + (!isM ? ' sw-active-h' : ''); 
+    document.getElementById('bm').className = 'switch-btn' + (isM ? ' sw-active-m' : '');
+
+    const applyContent = () => {
+      // Auto-map data keys to elements
+      Object.keys(d).forEach(id => {
+        const el = document.getElementById(id); 
+        if (el) el.innerHTML = d[id];
+      });
+
+      // Toggle display of the hardcoded papers list
+      const researchList = document.getElementById('health-research-list');
+      if (researchList) {
+          researchList.style.display = isM ? 'none' : 'block';
+      }
+
+      targets.forEach(t => { t.style.opacity = '1'; t.style.transform = 'translateY(0)'; });
+    };
+
+    if (instant) {
+      applyContent();
+    } else {
+      setTimeout(applyContent, 450); 
+    }
+  }
+
+  // Execute immediately to prevent the blue-to-red transition flash
+  const saved = localStorage.getItem('opticent_mode'); 
+  if(saved === 'metro') { 
+    // Temporarily disable all CSS transitions
+    const style = document.createElement('style');
+    style.innerHTML = '* { transition: none !important;}';
+    document.head.appendChild(style);
+    
+    mode = 'health'; 
+    go('metro', true); 
+    
+    // Re-enable transitions once the browser paints the initial state
+    requestAnimationFrame(() => { 
+      requestAnimationFrame(() => { 
+        style.remove(); 
+      }); 
+    }); 
+  }
+
+  setTimeout(() => {
+    document.body.classList.add('ready');
+  }, 1000);
+</script>
+
+</body>
+</html>

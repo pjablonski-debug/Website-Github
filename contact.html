@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opticent | Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom smaller hero for contact page */
+        .contact-hero {
+            min-height: 400px !important;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Using padding prevents the white background from collapsing and exposing a gap above the footer */
+            padding: 4rem 2rem 6rem 2rem; 
+        }
+
+        .contact-info h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
+            color: #1a1a2e;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+        }
+
+        .info-item h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--bp);
+            margin-bottom: 0.5rem;
+            transition: color 1.2s ease;
+        }
+
+        .info-item p, .info-item a {
+            font-size: 16px;
+            color: #555;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .contact-form-card {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group textarea {
+            resize: vertical; /* Prevents horizontal resizing */
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--ba);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--bnav);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 4rem; }
+            .hero-h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sw" id="sw">
+  <script>
+    if (localStorage.getItem('opticent_mode') === 'metro') {
+      document.getElementById('sw').classList.add('metro');
+    }
+  </script>
+
+  <nav id="nav">
+    <a href="index.html" class="logo-lockup">
+      <div class="logo-img-wrap">
+        <div class="logo-img logo-health" id="lh"><div class="logo-svg"></div></div>
+        <div class="logo-img logo-metro" id="lm"><div class="logo-svg"></div></div>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-opticent">Opticent</span>
+        <div class="logo-division"><div class="slot-reel" id="reel"><span class="slot-word">Health</span><span class="slot-word">Metrology</span></div></div>
+      </div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html" class="active-page">Contact Us</a></li>
+    </ul>
+    <div class="switcher-pill">
+      <button class="switch-btn sw-active-h" id="bh" onclick="go('health')">Health</button>
+      <button class="switch-btn" id="bm" onclick="go('metro')">Metrology</button>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="hero contact-hero">
+      <div class="hero-content fade-target" style="width: 100%; align-items: center; text-align: center;">
+        <p class="hero-eyebrow" id="h_eyebrow">Get in touch</p>
+        <h1 class="hero-h1" id="h_title">How can we help you?</h1>
+        <p class="hero-sub" id="h_sub" style="margin-bottom: 0;">Whether you are interested in our vis-OCT technology or industrial metrology solutions, our team is ready to assist.</p>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info fade-target">
+        <h2 id="info_title">Contact Information</h2>
+        <div class="info-item">
+            <h4>Office Address</h4>
+            <p>2510 Green Bay Rd<br>Evanston, IL 60201</p>
+        </div>
+        <div class="info-item">
+            <h4>Email Us</h4>
+            <p><a href="mailto:info@opticenthealth.com" id="info_email">info@opticenthealth.com</a></p>
+        </div>
+        <div class="info-item">
+            <h4>Global Support</h4>
+            <p id="info_support">Our experts are available for technical consultations, product demonstrations, and support worldwide.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-card fade-target">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            
+            <input type="hidden" name="access_key" value="14896506-d4d3-4e5e-83a0-5ddb24d5d506">
+            <input type="hidden" name="subject" value="New Contact Inquiry">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+                <label for="interest">How can we help?</label>
+                <select id="interest" name="interest">
+                    <option value="Request a quote">Request a quote</option>
+                    <option value="Product information">Product information</option>
+                    <option value="Request technical service">Request technical service</option>
+                    <option value="Career opportunities">Career opportunities</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" id="s_btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="foot-col foot-main">
+        <div class="footer-logo-lockup" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+          <div class="mini-logo-svg"></div>
+          <span class="foot-logo fade-target" id="f_logo" style="margin-bottom: 0;">Opticent, Inc.</span>
+        </div>
+        <p class="foot-address">2510 Green Bay Rd<br>Evanston, IL 60201<br><br><a href="mailto:info@opticenthealth.com" class="fade-target" id="f_email">info@opticenthealth.com</a></p>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html#leadership">Leadership</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="technology.html">Technology</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="foot-bottom">
+      <p>&copy; 2026 Opticent, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // --- Theme Toggling Logic ---
+  let mode = 'health';
+  
+  const unifiedText = {
+    h_eyebrow: 'Get in touch',
+    h_title: 'How can we help you?',
+    h_sub: 'Whether you are interested in our vis-OCT technology or industrial metrology solutions, our team is ready to assist.',
+    info_title: 'Contact Information',
+    info_email: 'info@opticenthealth.com',
+    info_support: 'Our experts are available for technical consultations, product demonstrations, and support worldwide.',
+    f_logo: 'Opticent, Inc.', 
+    f_email: 'info@opticenthealth.com'
+  };
+
+  const data = {
+    health: { ...unifiedText },
+    metro: { ...unifiedText }
+  };
+
+  function go(m, instant = false) {
+    if (m === mode && !instant) return;
+    mode = m; 
+    localStorage.setItem('opticent_mode', m);
+    
+    const d = data[m]; 
+    const sw = document.getElementById('sw'); 
+    const targets = document.querySelectorAll('.fade-target'); 
+    const isM = m === 'metro';
+
+    if (!instant) {
+      targets.forEach(t => { t.style.opacity = '0'; t.style.transform = 'translateY(4px)'; });
+    }
+
+    sw.className = 'sw' + (isM ? ' metro' : '');
+    document.getElementById('reel').style.transform = isM ? 'translateY(-18px)' : 'translateY(0)';
+    document.getElementById('lh').style.opacity = isM ? '0' : '1'; 
+    document.getElementById('lm').style.opacity = isM ? '1' : '0';
+    document.getElementById('bh').className = 'switch-btn' + (!isM ? ' sw-active-h' : ''); 
+    document.getElementById('bm').className = 'switch-btn' + (isM ? ' sw-active-m' : '');
+
+    const applyContent = () => {
+      Object.keys(d).forEach(id => {
+        const el = document.getElementById(id); 
+        if (el) {
+            if (el.tagName === 'A') el.innerText = d[id];
+            else el.innerHTML = d[id];
+        }
+      });
+      targets.forEach(t => { t.style.opacity = '1'; t.style.transform = 'translateY(0)'; });
+    };
+
+    if (instant) {
+      applyContent();
+    } else {
+      setTimeout(applyContent, 450); 
+    }
+  }
+
+  const saved = localStorage.getItem('opticent_mode'); 
+  if(saved === 'metro') { 
+    const style = document.createElement('style');
+    style.innerHTML = '* { transition: none !important;}';
+    document.head.appendChild(style);
+    mode = 'health'; 
+    go('metro', true); 
+    requestAnimationFrame(() => { 
+      requestAnimationFrame(() => { style.remove(); }); 
+    }); 
+  }
+
+  setTimeout(() => { document.body.classList.add('ready'); }, 1000);
+</script>
+</body>
+</html>
