@@ -52,8 +52,8 @@ nav {
 
 .logo-svg {
   width: 100%; height: 100%; transition: background-color 0.8s ease; display: block;
-  -webkit-mask: url("images/logo_recolorable.svg") no-repeat center;
-  mask: url("images/logo_recolorable.svg") no-repeat center;
+  -webkit-mask: url("Images/Logo_Recolorable.svg") no-repeat center;
+  mask: url("Images/Logo_Recolorable.svg") no-repeat center;
   -webkit-mask-size: contain; mask-size: contain; background-color: white; 
 }
 .sw.metro .logo-svg { background-color: var(--ba); }
@@ -135,7 +135,7 @@ nav .nav-links a.active-page {
   left: -35%;
   width: 90%;
   height: 160%;
-  background: url("images/logo_recolorable.svg") no-repeat center center;
+  background: url("Images/Logo_Recolorable.svg") no-repeat center center;
   background-size: contain;
   opacity: 0.05; 
   pointer-events: none; 
@@ -510,8 +510,8 @@ footer {
   height: 28px;
   background-color: #fff; 
   transition: background-color 1.2s ease;
-  -webkit-mask: url("images/logo_recolorable.svg") no-repeat center;
-  mask: url("images/logo_recolorable.svg") no-repeat center;
+  -webkit-mask: url("Images/Logo_Recolorable.svg") no-repeat center;
+  mask: url("Images/Logo_Recolorable.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
 }
