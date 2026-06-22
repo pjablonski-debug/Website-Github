@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opticent | Products</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
     
     <style>
         /* Modernized custom styling for product pages */
@@ -278,49 +279,117 @@
   <div id="metro-master" style="display: none;">
     <div class="product-tabs">
       <div class="fade-target" style="display: flex; gap: 2rem; width: 100%;">
-        <a href="javascript:void(0)" class="tab-link active" onclick="switchMetroTab('hardware', this)">Hardware</a>
-        <a href="javascript:void(0)" class="tab-link" onclick="switchMetroTab('software', this)">Software</a>
+        <a href="javascript:void(0)" class="tab-link active" onclick="switchMetroTab('arbiter', this)">Arbiter M1</a>
       </div>
     </div>
 
     <div class="main-container">
       
-      <div id="view-hardware" class="product-view active-view">
+      <div id="view-arbiter" class="product-view active-view">
         <div class="hero">
           <div class="hero-content fade-target">
-            <p class="hero-eyebrow">Hardware</p>
-            <h1 class="hero-h1">Metrology Hardware</h1>
-            <p class="hero-sub">Placeholder text for the upcoming metrology hardware product lineup. Details, specifications, and configurations will be placed here.</p>
-          </div>
-          <div class="hero-visual product-hero-visual fade-target">
+            <p class="hero-eyebrow">Arbiter M1</p>
+            <h1 class="hero-h1">The Next Generation of Imaging.</h1>
+            <p class="hero-sub">The Arbiter M1 framework delivers more than just incredible specs, but is also configurable to your needs. Work with us in clarifying your needs as we develop and iterate upon our latest metrology model.</p>
+            <div class="hero-actions" style="display: flex; gap: 1rem; margin-top: 2rem;">
+              <a href="contact.html" class="hero-cta">Submit An Inquiry →</a>
+              
+              <a href="technology.html" class="hero-link-btn" style="padding: 12px 24px;">
+                <span>Learn More →</span>
+              </a>
             </div>
-        </div>
-        
-        <div class="features fade-target">
-          <div class="content-block">
-             <h2 class="section-title">Hardware specifics coming soon.</h2>
-             <p class="section-desc">Additional content blocks, comparison tables, and specification grids can be mapped out here.</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="view-software" class="product-view">
-        <div class="hero">
-          <div class="hero-content fade-target">
-            <p class="hero-eyebrow">Software</p>
-            <h1 class="hero-h1">Metrology Software</h1>
-            <p class="hero-sub">Placeholder text for the metrology software suite. Information regarding CAD overlays, point cloud processing, and UI features will be placed here.</p>
           </div>
           <div class="hero-visual product-hero-visual fade-target">
-             </div>
+            <img src="Images/ArbiterM1Final.png" alt="Arbiter M1 System">
+          </div>
         </div>
         
         <div class="features fade-target">
-          <div class="content-block">
-             <h2 class="section-title">Software specifics coming soon.</h2>
-             <p class="section-desc">Additional content blocks detailing analysis algorithms, automation workflows, and data export capabilities will go here.</p>
+          <div class="split-section layers-cluster">
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">Performance</p>
+              <h2 class="section-title">Micron Resolution</h2>
+              <p class="section-desc">Our systems capture micron-scale details with astonishing clarity. Browse through our samples to see the level of precision we deliver across varying materials, surface textures, and complex geometries.</p>
+            </div>
+  
+            <div class="image-block" style="width: 420px; flex-shrink: 0;">
+              <div class="carousel-module">
+                <div class="carousel-viewport">
+                  <div class="carousel-slides" id="metro-slides">
+                    <div class="slide">
+                      <img src="Images/Sample1.png" alt="Semiconductor Wafer Scan">
+                      <div class="slide-caption">Broken MEMs mirror pictured on wafer</div>
+                    </div>
+                    <div class="slide">
+                      <img src="Images/Sample2.png" alt="Solder">
+                      <div class="slide-caption">Solder joint on SMT resistor</div>
+                    </div>
+                    <div class="slide">
+                      <img src="Images/Sample3.png" alt="Machined Surface Roughness">
+                      <div class="slide-caption">Strand of cat hair</div>
+                    </div>
+                    <div class="slide">
+                      <img src="Images/Sample4.png" alt="Machined Surface Roughness">
+                      <div class="slide-caption">Fibers within cellulosic tissue</div>
+                    </div>
+                    <div class="slide">
+                      <img src="Images/Sample5.png" alt="Threads">
+                      <div class="slide-caption">Thread pitch on standard M3 screw</div>
+                    </div>
+                    <div class="slide">
+                      <img src="Images/Sample6.png" alt="MEMs Thread">
+                      <div class="slide-caption">Torn thread on exterior of MEMs mirror</div>
+                    </div>
+                    <div class="slide">
+                      <img src="Images/Sample7.png" alt="Plush">
+                      <div class="slide-caption">Loose strands on surface of polyester fiber</div>
+                    </div>
+                  </div>
+  
+                  <button class="car-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                  <button class="car-arrow next" onclick="moveSlide(1)">&#10095;</button>
+  
+                  <div class="car-dots" id="metro-dots">
+                    <span class="car-dot active" onclick="setSlide(0)"><span class="dot-progress"></span></span>
+                    <span class="car-dot" onclick="setSlide(1)"><span class="dot-progress"></span></span>
+                    <span class="car-dot" onclick="setSlide(2)"><span class="dot-progress"></span></span>
+                    <span class="car-dot" onclick="setSlide(3)"><span class="dot-progress"></span></span>
+                    <span class="car-dot" onclick="setSlide(4)"><span class="dot-progress"></span></span>
+                    <span class="car-dot" onclick="setSlide(5)"><span class="dot-progress"></span></span>
+                    <span class="car-dot" onclick="setSlide(6)"><span class="dot-progress"></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="features features-alt fade-target">
+          <div class="split-section">
+            <div class="image-block">
+              <img src="Images/Depth_Demo.gif" alt="Arbiter Software Interface">
+            </div>
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">Depth Analysis</p>
+              <h2 class="section-title">In-Software Measurements</h2>
+              <p class="section-desc">Form precise depth measurements of your samples within our intuitive software suite. Acquire images with ease and export them to our post-processing software for further analysis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="features fade-target">
+          <div class="split-section  layers-cluster">
+            <div class="content-block" style="margin-bottom: 0;">
+              <p class="section-label">Hardware</p>
+              <h2 class="section-title">Swappable Lens Architecture</h2>
+              <p class="section-desc">Adapt to varying inspection requirements in seconds. The Arbiter M1 features a modular lens system, allowing you to instantly swap optics to balance field of view, imaging depth, and lateral resolution based on your immediate needs.</p>
+            </div>
+            <div class="image-block layers-img">
+              <img src="Images/Objectives.png" alt="Arbiter Swappable Lenses">
+            </div>
+          </div>
+        </div>
+        
       </div>
 
     </div>
@@ -454,6 +523,54 @@
   setTimeout(() => {
     document.body.classList.add('ready');
   }, 1000);
+
+  // --- Metrology Carousel Logic ---
+  let currentSlide = 0;
+  let slideInterval;
+  const totalSlides = 7;
+
+  function updateCarousel() {
+    const slides = document.getElementById('metro-slides');
+    if (!slides) return;
+
+    // Slide transition
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Dot and timer logic
+    const dots = document.querySelectorAll('.car-dot');
+    dots.forEach((dot, index) => {
+      dot.classList.remove('active');
+      // Trigger a DOM reflow so the 5s animation restarts cleanly
+      void dot.offsetWidth;
+      if (index === currentSlide) {
+        dot.classList.add('active');
+      }
+    });
+  }
+
+  function moveSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    updateCarousel();
+    resetInterval();
+  }
+
+  function setSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+    resetInterval();
+  }
+
+  function resetInterval() {
+    clearInterval(slideInterval);
+    // Move forward 1 slide automatically every 5000 milliseconds
+    slideInterval = setInterval(() => moveSlide(1), 5000);
+  }
+
+  // Initialize the carousel timer when page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    resetInterval();
+    updateCarousel();
+  });
 </script>
 </body>
 </html>

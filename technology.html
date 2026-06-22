@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opticent | Technology</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
 
 
 </head>
@@ -331,52 +332,6 @@
         </div>
       </div>
 
-      <div class="features features-alt fade-target metro-only-section">
-        <div class="split-section layers-cluster">
-          <div class="content-block" style="margin-bottom: 0;">
-            <p class="section-label">Performance</p>
-            <h2 class="section-title">Unmatched Resolution</h2>
-            <p class="section-desc">Our systems capture micron-scale details with astonishing clarity. Browse through
-              our samples to see the level of precision we deliver across varying materials, surface textures, and
-              complex geometries.</p>
-          </div>
-
-          <div class="image-block" style="width: 420px; flex-shrink: 0;">
-            <div class="carousel-module">
-              <div class="carousel-viewport">
-                <div class="carousel-slides" id="metro-slides">
-                  <div class="slide">
-                    <img src="Images/Sample1.png" alt="Semiconductor Wafer Scan">
-                    <div class="slide-caption">Transistor semiconductor die pictured with debris</div>
-                  </div>
-                  <div class="slide">
-                    <img src="Images/Sample2.png" alt="Solder">
-                    <div class="slide-caption">Solder joint on SMT resistor</div>
-                  </div>
-                  <div class="slide">
-                    <img src="Images/Sample3.png" alt="Machined Surface Roughness">
-                    <div class="slide-caption">Strand of cat hair</div>
-                  </div>
-                  <div class="slide">
-                    <img src="Images/Sample4.png" alt="Machined Surface Roughness">
-                    <div class="slide-caption">Fibers within cellulosic tissue</div>
-                  </div>
-                </div>
-
-                <button class="car-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="car-arrow next" onclick="moveSlide(1)">&#10095;</button>
-
-                <div class="car-dots" id="metro-dots">
-                  <span class="car-dot active" onclick="setSlide(0)"><span class="dot-progress"></span></span>
-                  <span class="car-dot" onclick="setSlide(1)"><span class="dot-progress"></span></span>
-                  <span class="car-dot" onclick="setSlide(2)"><span class="dot-progress"></span></span>
-                  <span class="car-dot" onclick="setSlide(3)"><span class="dot-progress"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="features features-alt fade-target" id="blizzard-section">
         <div class="split-section layers-cluster">
@@ -466,12 +421,12 @@
         // Metrology Images (Replace these paths with your actual metrology image files!)
         tech_hero_img: 'Images/Tech Hero3.png',
         c1_img: 'Images/Micron.png',
-        c2_img: 'Images/Roughness.png',
+        c2_img: 'Images/Depth.png',
         c3_img: 'Images/Throughput.png',
         blizzard_img: 'Images/Cooperation.png',
 
         c1l: 'Dimensional Metrology', c1t: 'Micron-Level Accuracy', c1d: 'Perfect for manufacturing where tolerances are tight and demanding. We work with you to determine the exact resolution you need.',
-        c2l: 'Surface Finish', c2t: 'Roughness Analysis', c2d: 'Characterize surface textures for a broad range of materials and extract critical roughness parameters with unprecedented resolution.',
+        c2l: 'Depth Imaging', c2t: '3-Dimensional Analysis', c2d: 'Characterize subsurface features and extract depth information and measurements from critical hard-to-reach defects.',
         c3l: 'Speed', c3t: 'Superior Throughput', c3d: 'Relative to tactile methods that are burdened by the movement of probes, our devices are faster and are constantly being optimized.',
         c4l: 'Multi-Industry Use', c4t: 'Applicable In Any Field', c4d: 'Nearly every industry has a need for precise measurement and tolerances. Our technology fulfills that need and seamlessly integrates into diverse production environments and existing workflows.', c4a: '',
         b_l: 'Custom Solutions', b_t: 'We build what you need.', b_d: "We work with companies directly to ensure we deliver exactly what they need. From start to finish, the design process is all about you.", b_a: 'Contact Us →',
@@ -558,7 +513,7 @@
     // --- Metrology Carousel Logic ---
     let currentSlide = 0;
     let slideInterval;
-    const totalSlides = 4;
+    const totalSlides = 7;
 
     function updateCarousel() {
       const slides = document.getElementById('metro-slides');
