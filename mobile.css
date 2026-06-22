@@ -213,12 +213,14 @@
     
     /* Products Page Tabs & Tables */
     .product-tabs > div {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem !important;
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: wrap; /* Allows the tabs to wrap gracefully on extremely narrow screens */
+        gap: 1.5rem !important;
     }
+
     .product-tabs a {
-        width: 100%;
+        width: auto !important; /* Removes the 100% width so they can sit side-by-side */
         text-align: center;
         padding-bottom: 8px;
     }
