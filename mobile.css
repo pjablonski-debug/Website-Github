@@ -29,11 +29,16 @@
     nav {
         height: auto;
         padding: 1rem 1.5rem;
-        flex-direction: row; /* Keeps logo left, waffle right */
+        display: flex;
+        flex-direction: row; 
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap; /* Allows menu to drop down below */
+        flex-wrap: wrap; 
     }
+    
+    /* Order properties keep the logo and waffle on top, menu items below */
+    .logo-lockup { order: 1; }
+    .waffle-btn { order: 2; }
     
     .waffle-btn {
         display: block;
@@ -46,7 +51,7 @@
     .waffle-btn svg {
         width: 24px;
         height: 24px;
-        fill: #fff; /* White for health mode */
+        fill: #fff; 
         transition: fill 1.2s ease;
     }
     
@@ -59,29 +64,33 @@
     nav .nav-links,
     nav .switcher-pill {
         display: none;
-        width: 100%;
     }
+    
     nav .nav-links {
         padding: 0;
     }
 
     /* Show them when the 'open' class is toggled via JS */
+    nav.open .switcher-pill {
+        display: inline-flex;
+        width: max-content; /* Prevents uneven stretching */
+        margin: 1.5rem auto 0 auto;
+        order: 3; /* Puts slider at the top of the dropdown */
+    }
+
     nav.open .nav-links {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
         padding: 1.5rem 0 1rem 0;
-    }
-    
-    nav.open .switcher-pill {
-        display: flex;
-        margin: 0 auto;
+        width: 100%;
+        order: 4; /* Puts links under the slider */
     }
 
     /* --- Hero Sections --- */
     .hero {
-        /* Puts the image (visual) on top of the text (content) */
+        /* Puts the image on top of the text */
         flex-direction: column-reverse; 
         text-align: center;
         padding-top: 0;
@@ -93,15 +102,24 @@
         max-height: none !important; 
     }
     
-    .hero-visual, 
-    .product-hero-visual {
+    .hero-visual {
         width: 100% !important;
-        /* Adds space above image, zero space below to close the gap */
         padding: 2rem 1.5rem 0rem 1.5rem !important; 
+    }
+
+    /* Override the 600px desktop height to collapse the huge gaps */
+    .product-hero-visual {
+        padding: 2rem 1.5rem 0rem 1.5rem !important; 
+        width: 100% !important;
+    }
+    .product-hero-visual img {
+        height: auto !important;
+        max-height: 300px !important;
+        width: 100% !important;
+        object-fit: contain !important;
     }
     
     .hero-content {
-        /* Reduced top padding to close the gap, normal bottom padding */
         padding: 1.5rem 1.5rem 3rem 1.5rem !important; 
         align-items: center !important;
         text-align: center;
@@ -159,6 +177,14 @@
         object-position: center !important;
     }
 
+    /* Forces the Aurora comparison image to stay inside the screen */
+    .image-block.compare-img img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: contain !important;
+    }
+
     /* --- Specific Component Adjustments --- */
     
     /* Technology Page Vertical Carousel */
@@ -196,7 +222,7 @@
     .compare-table-wrapper {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        margin: 1rem -1.5rem 0 -1.5rem; /* Allows scrolling edge-to-edge on mobile */
+        margin: 1rem -1.5rem 0 -1.5rem; 
         border-radius: 0;
         border-left: none;
         border-right: none;
