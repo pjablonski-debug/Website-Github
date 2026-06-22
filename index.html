@@ -36,6 +36,20 @@
       </div>
     </a>
 
+    <button class="waffle-btn" id="menuToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="4" height="4" rx="1" />
+            <rect x="10" y="3" width="4" height="4" rx="1" />
+            <rect x="17" y="3" width="4" height="4" rx="1" />
+            <rect x="3" y="10" width="4" height="4" rx="1" />
+            <rect x="10" y="10" width="4" height="4" rx="1" />
+            <rect x="17" y="10" width="4" height="4" rx="1" />
+            <rect x="3" y="17" width="4" height="4" rx="1" />
+            <rect x="10" y="17" width="4" height="4" rx="1" />
+            <rect x="17" y="17" width="4" height="4" rx="1" />
+        </svg>
+    </button>
+
     <ul class="nav-links">
       <li><a href="index.html" class="active-page">About Us</a></li>
       <li><a href="technology.html">Technology</a></li>
@@ -65,7 +79,7 @@
               <img src="Images/Leader3.jpg" alt="Leader">
               <img src="Images/Leader4.jpg" alt="Leader">
             </div>
-            <span id="hlink">Meet Opticent's Leadership →</span>
+            <span id="hlink">Meet Opticent's Leaders →</span>
           </a>
         </div>
       </div>
@@ -273,7 +287,7 @@
       // --- TEXT CONTENT ---
       h1: 'Pushing the bounds of<br>ocular imaging.',
       sub: 'We deliver visible-light optical coherence tomography technology, which offers the highest spatial resolution and imaging contrast in the market for clinical and preclinical use.',
-      cta: 'Learn More →', hlink: "Meet Opticent's Leadership →",
+      cta: 'Learn More →', hlink: "Meet Opticent's Leaders →",
       plabel: 'Our Partners', ptitle: "We're trusted by industry leaders worldwide.",
       a_label: 'About Us', a_title: 'Innovating for Ophthalmic Research', a_desc: 'We strive to position our revolutionary imaging technology at the forefront of disease assessment and ophthalmic research. With a decade of experience, we aim to transform the standard of care with innovative tools that will enable unprecedented insight into the origins and treatment of blinding diseases such as Glaucoma.',
       p_label: 'Our Products', p_title: 'We Develop Imaging Tools', p_desc: 'Our tools aide top specialists in human clinical research, small animal ophthalmic research, metrology, and high performance spectrometry.<br>Put simply, our experts can fulfill your imaging needs.', p_cta: 'View our products →',
@@ -382,6 +396,10 @@
   }, 1000);
 </script>
 
-
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>
 </body>
 </html>

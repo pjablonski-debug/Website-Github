@@ -38,6 +38,21 @@
           </div>
         </div>
       </a>
+
+      <button class="waffle-btn" id="menuToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="4" height="4" rx="1" />
+            <rect x="10" y="3" width="4" height="4" rx="1" />
+            <rect x="17" y="3" width="4" height="4" rx="1" />
+            <rect x="3" y="10" width="4" height="4" rx="1" />
+            <rect x="10" y="10" width="4" height="4" rx="1" />
+            <rect x="17" y="10" width="4" height="4" rx="1" />
+            <rect x="3" y="17" width="4" height="4" rx="1" />
+            <rect x="10" y="17" width="4" height="4" rx="1" />
+            <rect x="17" y="17" width="4" height="4" rx="1" />
+        </svg>
+      </button>
+
       <ul class="nav-links">
         <li><a href="index.html">About Us</a></li>
         <li><a href="technology.html" class="active-page">Technology</a></li>
@@ -557,7 +572,12 @@
       resetInterval();
       updateCarousel();
     });
-  </script>
+</script>
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>
 
 </body>
 
