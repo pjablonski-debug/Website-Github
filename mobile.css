@@ -96,30 +96,31 @@
         padding-top: 0;
     }
     
-    /* Override absolute heights for product pages on mobile */
-    .product-view .hero { 
+    /* Added "body" to increase specificity and override the <style> block in products.html */
+    body .product-view .hero { 
         min-height: auto !important; 
         max-height: none !important; 
     }
     
-    .hero-visual {
+    body .hero-visual {
         width: 100% !important;
         padding: 2rem 1.5rem 0rem 1.5rem !important; 
     }
 
-    /* Override the 600px desktop height to collapse the huge gaps */
-    .product-hero-visual {
+    body .product-hero-visual {
         padding: 2rem 1.5rem 0rem 1.5rem !important; 
         width: 100% !important;
     }
-    .product-hero-visual img {
+    
+    /* Forces the product images to scale down and removes the 600px gap */
+    body .product-hero-visual img {
         height: auto !important;
         max-height: 300px !important;
         width: 100% !important;
         object-fit: contain !important;
     }
     
-    .hero-content {
+    body .hero-content {
         padding: 1.5rem 1.5rem 3rem 1.5rem !important; 
         align-items: center !important;
         text-align: center;
