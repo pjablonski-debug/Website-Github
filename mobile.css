@@ -212,17 +212,23 @@
     }
     
     /* Products Page Tabs & Tables */
+    /* Force horizontal product tabs on mobile */
+    .product-tabs {
+        padding: 1rem 1.5rem !important; /* Shrinks the wide desktop padding */
+    }
+
     .product-tabs > div {
         flex-direction: row !important;
-        justify-content: center;
-        flex-wrap: wrap; /* Allows the tabs to wrap gracefully on extremely narrow screens */
-        gap: 1.5rem !important;
+        flex-wrap: nowrap !important; /* Forces them to stay on one line */
+        justify-content: center !important;
+        gap: 1rem !important; /* Reduces the gap to fit smaller screens */
     }
 
     .product-tabs a {
-        width: auto !important; /* Removes the 100% width so they can sit side-by-side */
-        text-align: center;
-        padding-bottom: 8px;
+        width: max-content !important; /* Hugs the text tightly instead of stretching */
+        flex: 0 0 auto !important; /* Prevents flexbox from forcing them wide */
+        font-size: 13px !important; /* Slightly smaller text to fit side-by-side */
+        white-space: nowrap !important; /* Prevents text inside the link from breaking */
     }
     .specs-grid {
         grid-template-columns: 1fr !important;
