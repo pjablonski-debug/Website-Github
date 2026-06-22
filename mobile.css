@@ -11,19 +11,10 @@
 
 @media screen and (max-width: 768px) {
     
-    /* --- Global, Typography & iPhone Notch Sync --- */
-    html, body {
+    /* --- Global & Typography --- */
+    body {
         overflow-x: hidden;
-        /* Syncs the iPhone notch/safe area to the Health background */
-        background-color: #0A2D5E !important; 
-        transition: background-color 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
-    /* Dynamically changes the iPhone notch to Metrology background when toggled */
-    html:has(.sw.metro), body:has(.sw.metro) {
-        background-color: #310D00 !important; 
-    }
-
     .section-title {
         font-size: 28px !important;
     }
@@ -32,6 +23,11 @@
     }
     .hero-sub {
         font-size: 15px;
+    }
+
+    /* Forces the body background to match the Metrology theme when active */
+    body:has(.sw.metro) {
+        background-color: #310D00;
     }
 
     /* --- Navigation & Waffle Menu --- */
@@ -45,6 +41,7 @@
         flex-wrap: wrap; 
     }
     
+    /* Order properties keep the logo and waffle on top, menu items below */
     .logo-lockup { order: 1; }
     .waffle-btn { order: 2; }
     
@@ -63,10 +60,12 @@
         transition: fill 1.2s ease;
     }
     
+    /* Metro mode recolors the waffle icon */
     .sw.metro .waffle-btn svg {
         fill: var(--ba); 
     }
 
+    /* Hide links and pill by default on mobile */
     nav .nav-links,
     nav .switcher-pill {
         display: none;
@@ -76,11 +75,12 @@
         padding: 0;
     }
 
+    /* Show them when the 'open' class is toggled via JS */
     nav.open .switcher-pill {
         display: inline-flex;
-        width: max-content; 
+        width: max-content; /* Prevents uneven stretching */
         margin: 1.5rem auto 0 auto;
-        order: 3; 
+        order: 3; /* Puts slider at the top of the dropdown */
     }
 
     nav.open .nav-links {
@@ -90,16 +90,18 @@
         gap: 1.5rem;
         padding: 1.5rem 0 1rem 0;
         width: 100%;
-        order: 4; 
+        order: 4; /* Puts links under the slider */
     }
 
     /* --- Hero Sections --- */
     .hero {
+        /* Puts the image on top of the text */
         flex-direction: column-reverse; 
         text-align: center;
         padding-top: 0;
     }
     
+    /* Added "body" to increase specificity and override the <style> block in products.html */
     body .product-view .hero { 
         min-height: auto !important; 
         max-height: none !important; 
@@ -115,6 +117,7 @@
         width: 100% !important;
     }
     
+    /* Forces the product images to scale down and removes the 600px gap */
     body .product-hero-visual img {
         height: auto !important;
         max-height: 300px !important;
@@ -150,6 +153,7 @@
         text-align: center;
     }
     
+    /* Stacks the 50/50 image and text sections */
     .split-section, 
     .split-section.layers-cluster {
         grid-template-columns: 1fr !important;
@@ -158,6 +162,7 @@
         text-align: center;
     }
     
+    /* Fixes the Right-to-Left hack used for reverse sections on desktop */
     .split-section.reverse {
         direction: ltr !important;
     }
@@ -178,6 +183,7 @@
         object-position: center !important;
     }
 
+    /* Forces the Aurora comparison image to stay inside the screen */
     .image-block.compare-img img {
         width: 100% !important;
         height: auto !important;
@@ -185,22 +191,15 @@
         object-fit: contain !important;
     }
 
-    /* --- Arbiter Carousel Dots Fix --- */
-    .car-dots {
-        gap: 6px !important; /* Tighter spacing */
-        padding: 0 10px; /* Prevents edge-touching */
-    }
-    .car-dot {
-        width: 25px !important; /* Shorter dots so they all fit */
-    }
-
-    /* --- Technology Page Vertical Carousel --- */
+    /* --- Specific Component Adjustments --- */
+    
+    /* Technology Page Vertical Carousel */
     .vert-logo-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1.5rem;
     }
     
-    /* --- Index Page Specifications Sidebar --- */
+    /* Index Page Specifications Sidebar */
     .spec-layout-wrapper {
         flex-direction: column !important;
         gap: 2rem !important;
@@ -212,7 +211,7 @@
         text-align: center;
     }
     
-    /* --- Products Page Tabs & Comparison Table Fix --- */
+    /* Products Page Tabs & Tables */
     .product-tabs > div {
         flex-direction: column;
         align-items: center;
@@ -226,28 +225,31 @@
     .specs-grid {
         grid-template-columns: 1fr !important;
     }
-    
-    /* Stops table scroll and forces text to wrap */
     .compare-table-wrapper {
-        overflow-x: hidden !important; 
-        margin: 1rem 0 0 0 !important; 
-        border-radius: 12px !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1rem -1.5rem 0 -1.5rem; 
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
     }
+
+    /* Allow the Halo comparison table to fit on mobile */
     .compare-table {
         min-width: 100% !important;
     }
+
     .compare-table th, 
     .compare-table td {
         padding: 0.75rem 0.5rem !important;
         font-size: 12px !important;
-        word-wrap: break-word; /* Allows long text to jump to next line */
     }
+
     .check-icon {
         font-size: 1rem !important;
-        transform: scale(1) !important;
     }
     
-    /* --- Contact Page Grid --- */
+    /* Contact Page Grid */
     .contact-grid {
         grid-template-columns: 1fr !important;
         gap: 2.5rem !important;
@@ -260,7 +262,7 @@
         padding: 2rem 1.5rem !important;
     }
 
-    /* --- Research Page Grid --- */
+    /* Research Page Grid */
     .research-grid {
         grid-template-columns: 1fr !important;
         padding: 0 !important;
@@ -288,5 +290,14 @@
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+    }
+
+    /* Fix for Arbiter carousel dots overflowing */
+    .car-dots {
+        gap: 6px !important;
+    }
+
+    .car-dot {
+        width: 25px !important;
     }
 }
