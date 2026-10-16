@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "rewrites": [
+      { "source": "/@(health|metrology)",            "destination": "/index.html" },
+      { "source": "/@(health|metrology)/index",      "destination": "/index.html" },
+      { "source": "/@(health|metrology)/technology", "destination": "/technology.html" },
+      { "source": "/@(health|metrology)/products",   "destination": "/products.html" },
+      { "source": "/@(health|metrology)/research",   "destination": "/research.html" },
+      { "source": "/@(health|metrology)/contact",    "destination": "/contact.html" }
+    ]
+  }
+}
