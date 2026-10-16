@@ -34,6 +34,11 @@
     try { localStorage.setItem('opticent_mode', m); } catch (e) {}
   }
 
+  // Tab title follows the mode (internal values are 'health' / 'metro')
+  function setTitle() {
+    document.title = mode === 'metro' ? 'Opticent | Metrology' : 'Opticent | Health';
+  }
+
   // --- Work out the mode for this page load ---
   // Priority: URL prefix > last saved choice > Health
   var here = parsePath(location.pathname);
@@ -41,6 +46,7 @@
   var page = here.page;
   var known = PAGES.indexOf(page) !== -1;
   store(mode);
+  setTitle();
 
   // Old/unprefixed URLs (/, /products, /products.html) get the mode added
   if (known) {
@@ -79,9 +85,7 @@
       }
     }
     rewriteLinks();
-    document.title = mode === 'metrology'
-    ? 'Opticent | Metrology'
-    : 'Opticent | Health';
+    setTitle();
   }
 
   // Back/forward between /health/x and /metrology/x flips the mode
@@ -90,7 +94,11 @@
     if (p.mode && p.mode !== mode && typeof window.go === 'function') window.go(p.mode);
   });
 
-  document.addEventListener('DOMContentLoaded', rewriteLinks);
+  // Re-apply after parsing, in case a <title> tag after this script overwrote it
+  document.addEventListener('DOMContentLoaded', function () {
+    rewriteLinks();
+    setTitle();
+  });
 
   window.OpticentRouter = {
     get mode() { return mode; },
