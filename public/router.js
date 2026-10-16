@@ -79,6 +79,9 @@
       }
     }
     rewriteLinks();
+    document.title = mode === 'metrology'
+    ? 'Opticent | Metrology'
+    : 'Opticent | Health';
   }
 
   // Back/forward between /health/x and /metrology/x flips the mode
