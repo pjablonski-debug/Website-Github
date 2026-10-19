@@ -62,7 +62,7 @@ nav {
 .logo-opticent {
   display: block;
   height: 22px;
-  transform: translateY(4px);
+  /* transform: translateY(4px); */
   aspect-ratio: 4.1 / 1; /* your SVG's width ÷ height */
   background-color: #fff;
   -webkit-mask: url("Images/Logo_Title.svg") no-repeat left bottom / contain;
