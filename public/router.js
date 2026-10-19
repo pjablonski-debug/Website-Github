@@ -40,9 +40,10 @@
   }
 
   // --- Work out the mode for this page load ---
-  // Priority: URL prefix > last saved choice > Health
+  // Priority: URL prefix > bare domain is always Health > last saved choice > Health
   var here = parsePath(location.pathname);
-  var mode = here.mode || (readStored() === 'metro' ? 'metro' : 'health');
+  var isRoot = /^\/(index(\.html)?)?$/.test(location.pathname);
+  var mode = here.mode || (isRoot ? 'health' : (readStored() === 'metro' ? 'metro' : 'health'));
   var page = here.page;
   var known = PAGES.indexOf(page) !== -1;
   store(mode);
