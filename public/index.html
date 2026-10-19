@@ -28,7 +28,7 @@
         <div class="logo-img logo-metro" id="lm"><div class="logo-svg"></div></div>
       </div>
       <div class="logo-text-wrap">
-        <span class="logo-opticent">Opticent</span>
+        <span class="logo-opticent" role="img" aria-label="Opticent"></span>
         <div class="logo-division">
           <div class="slot-reel" id="reel">
             <span class="slot-word">Health</span>
@@ -255,7 +255,7 @@
       <div class="foot-col foot-main">
         <div class="footer-logo-lockup" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
           <div class="mini-logo-svg"></div>
-          <span class="foot-logo fade-target" id="f_logo" style="margin-bottom: 0;">Opticent, Inc.</span>
+          <span class="foot-logo fade-target" role="img" aria-label="Opticent, Inc."></span>
         </div>
         <p class="foot-address">2510 Green Bay Rd<br>Evanston, IL 60201<br><br><a href="mailto:info@opticenthealth.com" class="fade-target" id="f_email">info@opticenthealth.com</a></p>
       </div>
@@ -293,7 +293,7 @@
       plabel: 'Our Partners', ptitle: "We're trusted by industry leaders worldwide.",
       a_label: 'About Us', a_title: 'Innovating for Ophthalmic Research', a_desc: 'We strive to position our revolutionary imaging technology at the forefront of disease assessment and ophthalmic research. With a decade of experience, we aim to transform the standard of care with innovative tools that will enable unprecedented insight into the origins and treatment of blinding diseases such as Glaucoma.',
       p_label: 'Our Products', p_title: 'We Develop Imaging Tools', p_desc: 'Our tools aide top specialists in human clinical research, small animal ophthalmic research, metrology, and high performance spectrometry.<br>Put simply, our experts can fulfill your imaging needs.', p_cta: 'View our products →',
-      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com',
+      f_email: 'info@opticenthealth.com',
       l_label: 'Leadership', 
       l_title: 'Meet the Pioneers',
       s_label: 'Performance', 
@@ -316,7 +316,7 @@
       plabel: 'Applicable Industries', 
       ptitle: 'Precision metrology for critical applications.',
       p_label: 'Our Solutions', p_title: 'Tailored to Your Needs', p_desc: 'Talk to our experts to determine what your company needs, we will work with you to deliver unbeatable imaging resolution no matter what the application is.', p_cta: 'View our services →',
-      f_logo: 'Opticent, Inc.', f_email: 'info@opticenthealth.com',
+      f_email: 'info@opticenthealth.com',
       l_label: 'Experts', 
       l_title: 'Meet Our Experts',
       s_label: 'Performance', 
@@ -356,7 +356,7 @@
 
     const applyContent = () => {
       // Update text elements
-      ['h1','sub','cta','hlink','plabel','ptitle','a_label','a_title','a_desc','p_label','p_title','p_desc','p_cta','f_logo','f_email', 'l_label', 'l_title', 's_label', 's_title', 's_desc', 'stat1_label', 'stat1_val', 'stat1_desc', 'stat2_label', 'stat2_val', 'stat2_desc', 'stat3_label', 'stat3_val', 'stat3_desc'].forEach(id => {
+      ['h1','sub','cta','hlink','plabel','ptitle','a_label','a_title','a_desc','p_label','p_title','p_desc','p_cta','f_email', 'l_label', 'l_title', 's_label', 's_title', 's_desc', 'stat1_label', 'stat1_val', 'stat1_desc', 'stat2_label', 'stat2_val', 'stat2_desc', 'stat3_label', 'stat3_val', 'stat3_desc'].forEach(id => {
         const el = document.getElementById(id); 
         if (el) el.innerHTML = d[id];
       });

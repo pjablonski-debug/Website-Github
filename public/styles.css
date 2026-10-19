@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Raleway:wght@200;300;400&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Raleway:wght@200;300;400;500&family=Inter:wght@300;400;500;600;700&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -59,8 +59,14 @@ nav {
 .sw.metro .logo-svg { background-color: var(--ba); }
 
 .logo-text-wrap { display: flex; flex-direction: row; align-items: flex-end; gap: 10px; }
-.logo-opticent { font-family: "Eras Medium ITC", "Eras ITC", sans-serif; font-weight: 500; font-size: 22px; letter-spacing: 0.02em; color: #fff; line-height: 1.1; }
-
+.logo-opticent {
+  display: block;
+  height: 22px;
+  aspect-ratio: 4.1 / 1; /* your SVG's width ÷ height */
+  background-color: #fff;
+  -webkit-mask: url("Images/Logo_Title.svg") no-repeat left bottom / contain;
+  mask: url("Images/Logo_Title.svg") no-repeat left bottom / contain;
+}
 .logo-division { 
   font-family: 'Raleway', sans-serif; height: 18px; font-weight: 500; font-size: 12px; letter-spacing: 0.12em; 
   text-transform: uppercase; color: var(--ba); overflow: hidden; transition: color 1.2s ease;
@@ -481,14 +487,13 @@ footer {
 .foot-col ul li a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.3s; }
 .foot-col ul li a:hover { color: var(--ba); }
 
-.foot-logo { 
-  font-family: "Eras Medium ITC", "Eras ITC", sans-serif; 
-  font-weight: 500; 
-  font-size: 24px; 
-  letter-spacing: 0.02em; 
-  color: #fff; 
-  margin-bottom: 0; 
-  display: block; 
+.foot-logo {
+  display: block;
+  height: 22px;
+  aspect-ratio: 6.11 / 1; 
+  background-color: #fff;
+  -webkit-mask: url("Images/Logo_Title_Inc.svg") no-repeat left center / contain;
+  mask: url("Images/Logo_Title_Inc.svg") no-repeat left center / contain;
 }
 .foot-address { 
   font-size: 14px; 
