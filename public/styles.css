@@ -56,7 +56,7 @@ nav {
   mask: url("Images/Logo_Recolorable.svg") no-repeat center;
   -webkit-mask-size: contain; mask-size: contain; background-color: white; 
 }
-.sw.metro .logo-svg { background-color: var(--ba); }
+.sw.metro .logo-svg { background-color: var(--ba); transform: -2px;}
 
 .logo-text-wrap { display: flex; flex-direction: row; align-items: center; gap: 10px; }
 .logo-opticent {
