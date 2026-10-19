@@ -58,10 +58,11 @@ nav {
 }
 .sw.metro .logo-svg { background-color: var(--ba); }
 
-.logo-text-wrap { display: flex; flex-direction: row; align-items: flex-end; gap: 10px; }
+.logo-text-wrap { display: flex; flex-direction: row; align-items: center; gap: 10px; }
 .logo-opticent {
   display: block;
   height: 22px;
+  transform: translateY(2px);
   aspect-ratio: 4.1 / 1; /* your SVG's width ÷ height */
   background-color: #fff;
   -webkit-mask: url("Images/Logo_Title.svg") no-repeat left bottom / contain;
