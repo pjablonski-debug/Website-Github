@@ -77,6 +77,7 @@
         </div>
         <div class="hero-visual fade-target">
           <img id="tech_hero_img" src="/Images/Tech Hero2.webp" alt="vis-OCT Technology">
+          <video id="tech_hero_vid" src="/videos/TechHero4.webm" autoplay muted loop playsinline aria-label="Optical Metrology" hidden></video>
         </div>
       </div>
 
@@ -415,7 +416,6 @@
         d3: '<p class="section-label">The Pioneers</p><h3 class="feat-title">Born from Research</h3><p class="feat-desc">Invented at Northwestern University in 2013 by Professor Hao F. Zhang\'s lab, vis-OCT powers the ultra-high resolution of our flagship Blizzard spectrometer.</p>',
 
         // Health Images 
-        tech_hero_img: '/Images/Tech Hero2.webp',
         c1_img: '/Images/Functional.webp',
         c2_img: '/Images/Fundus.webp',
         c3_img: '/Images/Retinal.webp',
@@ -436,7 +436,6 @@
         d3: '<p class="section-label">Consistency</p><h3 class="feat-title">Repeatable Results</h3><p class="feat-desc">Our systems guarantee repeatable results and allow multi-trial analysis due to the non-invasive nature of optical metrology.</p>',
 
         // Metrology Images (Replace these paths with your actual metrology image files!)
-        tech_hero_img: '/Images/Tech Hero4.gif',
         c1_img: '/Images/Micron.webp',
         c2_img: '/Images/Depth.webp',
         c3_img: '/Images/Throughput.webp',
@@ -488,6 +487,10 @@
             }
           }
         });
+
+        // Hero: still image for Health, looping video for Metrology
+        document.getElementById('tech_hero_img').hidden = isM;
+        document.getElementById('tech_hero_vid').hidden = !isM;
 
         const finalLink = document.getElementById('b_a');
         if (finalLink) {

@@ -62,7 +62,7 @@ nav {
 .logo-opticent {
   display: block;
   height: 22px;
-  transform: translateY(2px);
+  transform: translateY(3px);
   aspect-ratio: 4.1 / 1; /* your SVG's width ÷ height */
   background-color: #fff;
   -webkit-mask: url("Images/Logo_Title.svg") no-repeat left bottom / contain;
@@ -72,7 +72,7 @@ nav {
   font-family: 'Raleway', sans-serif; height: 18px; font-weight: 500; font-size: 12px; letter-spacing: 0.12em; 
   text-transform: uppercase; color: var(--ba); overflow: hidden; transition: color 1.2s ease;
   padding-left: 12px; border-left: 1px solid rgba(255,255,255,0.25); display: flex; align-items: flex-start; margin-bottom: 1px;
-  transform: translateY(4px);
+  transform: translateY(2px);
 }
 
 .slot-reel { display: flex; flex-direction: column; transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
@@ -185,6 +185,15 @@ nav .nav-links a.active-page {
   object-fit: cover; 
   display: block;
 }
+
+.hero-visual video, .image-block video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+.hero-visual video { max-height: 450px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
+.hero-visual [hidden] { display: none !important; }
 
 /* Product Page Specific Hero Images Override */
 .product-hero-visual img {

@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/mobile.css">
     
-    <link rel="preload" href="/Images/Header_Metro.gif" as="image">
-    <link rel="preload" href="/Images/Header_Health.gif" as="image">
 </head>
 <body>
 
@@ -86,7 +84,8 @@
         </div>
       </div>
       <div class="hero-visual fade-target">
-        <img id="hero_img" src="/Images/Header_Health.gif" alt="Hero Imaging">
+        <video id="hero_vid_h" src="/videos/Header_Health.webm" autoplay muted loop playsinline preload="auto" aria-label="Hero Imaging"></video>
+        <video id="hero_vid_m" src="/videos/Header_Metro.webm" autoplay muted loop playsinline preload="auto" aria-label="Hero Imaging" hidden></video>
       </div>
     </div>
 
@@ -304,7 +303,6 @@
       stat3_label: 'A-Line Rate', stat3_val: '125 KHz', stat3_desc: 'Ultra-fast acquisition speeds powered by our flagship Blizzard spectrometer for rapid alignment.',
       
       // --- IMAGE PATHS (Update these with your actual filenames) ---
-      hero_img_src: '/Images/Header_Health.gif',
       about_img_src: '/Images/Innovating.webp',
       products_img_src: '/Images/Aurora.webp'
     },
@@ -327,7 +325,6 @@
       stat3_label: 'Depth of Focus', stat3_val: '4 - 28 &microm', stat3_desc: 'Variable depending on objective lens - made easily hotswappable for user convenience.',
       
       // --- IMAGE PATHS (Update these with your actual filenames) ---
-      hero_img_src: '/Images/Header_Metro.gif',
       about_img_src: '/Images/Tailored.webp',
       products_img_src: '/Images/Tailored.webp'
     }
@@ -361,8 +358,11 @@
         if (el) el.innerHTML = d[id];
       });
       
+      // Swap hero video (both are loaded; only one is shown)
+      document.getElementById('hero_vid_h').hidden = isM;
+      document.getElementById('hero_vid_m').hidden = !isM;
+
       // Update image sources
-      if (document.getElementById('hero_img')) document.getElementById('hero_img').src = d.hero_img_src;
       if (document.getElementById('about_img')) document.getElementById('about_img').src = d.about_img_src;
       if (document.getElementById('products_img')) document.getElementById('products_img').src = d.products_img_src;
 
