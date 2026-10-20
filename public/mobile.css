@@ -309,3 +309,30 @@
         width: 25px !important;
     }
 }
+
+/* --- Small phones (iPhone SE/mini, most Androids) ---
+   Shrinks the header lockup so the waffle stays on the same row as the logo.
+   Slot height stays 18px because go() moves the reel by exactly -18px. */
+@media screen and (max-width: 400px) {
+    nav {
+        padding: 1rem 1rem;
+    }
+    .logo-lockup,
+    .logo-text-wrap {
+        gap: 8px;
+    }
+    .logo-img-wrap {
+        width: 36px;
+        height: 36px;
+    }
+    .logo-opticent {
+        height: 18px;
+    }
+    .logo-division {
+        font-size: 13px;
+        padding-left: 8px;
+    }
+    .waffle-btn {
+        padding: 0.25rem;
+    }
+}

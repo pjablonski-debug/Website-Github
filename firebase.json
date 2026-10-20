@@ -4,6 +4,24 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
     "trailingSlash": false,
+    "headers": [
+      {
+        "source": "**/*.@(css|js|webp|png|jpg|jpeg|gif|svg|ico|webm|mp4|woff2|pdf)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+      },
+      {
+        "source": "/",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "**/!(*.*)",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      }
+    ],
     "rewrites": [
       { "source": "/@(health|metrology)",            "destination": "/index.html" },
       { "source": "/@(health|metrology)/index",      "destination": "/index.html" },

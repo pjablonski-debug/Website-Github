@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Stamp asset versions
+        run: find public -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -exec sed -i "s/__VERSION__/${GITHUB_SHA::8}/g" {} +
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
