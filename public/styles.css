@@ -417,7 +417,10 @@ nav .nav-links a.active-page {
 
 .product-tabs { animation: dropDownTab 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     position: relative;
-    z-index: 5;display: flex; gap: 2rem; padding: 1rem 3rem; background: transparent; border-top: 1px solid rgba(255,255,255,0.1);}
+    z-index: 5;display: flex; gap: 2rem; padding: 1rem 2rem; background: transparent; border-top: 1px solid rgba(255,255,255,0.1);}
+
+.product-tabs > div { justify-content: center; }
+
 /* Prevent product tabs animation from re-running on mode toggle */
 body.ready .product-tabs {
     animation: none !important;
@@ -710,4 +713,4 @@ body.ready .features {
 @keyframes fillDot {
   from { width: 0%; }
   to { width: 100%; }
-}
+}
