@@ -25,6 +25,11 @@
         font-size: 15px;
     }
 
+    /* HaloM400 swappable-lens image */
+    #view-HaloM .image-block.layers-img img {
+        max-height: 200px;
+    }
+
     /* Forces the body background to match the Metrology theme when active */
     body:has(.sw.metro) {
         background-color: #310D00;
@@ -335,4 +340,4 @@
     .waffle-btn {
         padding: 0.25rem;
     }
-}
+}
